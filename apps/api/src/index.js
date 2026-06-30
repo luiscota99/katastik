@@ -805,7 +805,10 @@ app.get('/api/charges/:id/cobro-status', async (req, res) => {
   }
   try {
     const inv = await getInvoice(entry.nvUuid);
-    const paid = !!inv.paidAt || ['PAID', 'PAGADA', 'COLLECTED'].includes(String(inv.statusId).toUpperCase());
+    // status_id 5 = pagado en PorCobrar stage (paid_at puede ser null en stage aunque esté pagado)
+    const paid = !!inv.paidAt
+      || Number(inv.statusId) === 5
+      || ['PAID', 'PAGADA', 'COLLECTED', '5'].includes(String(inv.statusId).toUpperCase());
     if (paid) {
       const settled = await settleCharge(chargeId, { paymentRef: inv.paidAt ? `invoice:${entry.nvUuid}` : undefined });
       return res.json({
