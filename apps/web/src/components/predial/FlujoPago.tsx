@@ -11,7 +11,6 @@ import {
 import { Button } from '@/components/ui/button';
 
 type Fase = 'inicio' | 'esperando' | 'pagado';
-type Vista = 'qr';
 
 interface Props {
   charge: Adeudo;
@@ -32,9 +31,6 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
     : 'inicio';
 
   const [fase, setFase] = useState<Fase>(faseInicial);
-  // PorCobrar bloquea iframes con X-Frame-Options: sameorigin — ir directo a vista QR/link
-  const [vista, setVista] = useState<Vista>('qr');
-  const [iframeBlocked, setIframeBlocked] = useState(true);
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -46,7 +42,7 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
   const ext = charge as AdeudoExt;
   const periodoLabel = ext.anio && ext.bimestre
     ? `${ext.anio} Bim. ${ext.bimestre}`
-    : (charge.periodo || formatDate(charge.fechaLimite));
+    : (charge.periodo || formatDate(charge.fechaLimite ?? ''));
 
   const stopPolling = () => {
     if (pollRef.current) { clearInterval(pollRef.current); pollRef.current = null; }
@@ -70,7 +66,7 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
       } catch { /* reintentar */ }
     }, interval);
     return () => stopPolling();
-  }, [fase, vista, iframeBlocked, charge.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [fase, charge.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // PorCobrar bloquea iframes — no intentamos cargar el iframe, vamos directo a QR/link.
 
@@ -81,7 +77,6 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
       const resp = await createCobro(charge, email.trim() || undefined);
       setPaymentLink(resp.paymentLink);
       setFase('esperando');
-      setVista('qr');
     } catch (e) {
       setError(e instanceof Error ? e.message : 'No se pudo generar el cobro en PorCobrar');
     } finally {
@@ -128,13 +123,8 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
           </div>
           <div className="flex items-center gap-2">
             {fase === 'esperando' && paymentLink && (
-              <div className="flex rounded-lg border border-white/20 overflow-hidden">
-                <button
-                  onClick={() => setVista('qr')}
-                  className="px-2 py-1 text-xs flex items-center gap-1 bg-white/20"
-                >
-                  <QrCode className="w-3 h-3" /> QR / Link
-                </button>
+              <div className="flex rounded-lg border border-white/20 overflow-hidden px-2 py-1 text-xs items-center gap-1">
+                <QrCode className="w-3 h-3" /> QR / Link
               </div>
             )}
             <button onClick={onClose} className="text-white/60 hover:text-white transition-colors">
@@ -253,39 +243,30 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
         </div>
 
         {/* Footer */}
-        {!showIframe && (
-          <div className="px-6 pb-5 flex items-center justify-between gap-3">
-            {fase === 'inicio' && (
-              <>
-                <Button variant="outline" size="sm" onClick={onClose} disabled={loading}>Cancelar</Button>
-                <Button size="sm" onClick={handleCrearCobro} disabled={loading} className="bg-green-600 hover:bg-green-700 gap-1.5">
-                  {loading
-                    ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Generando…</>
-                    : <><CreditCard className="w-3.5 h-3.5" /> Generar cobro</>}
-                </Button>
-              </>
-            )}
-            {fase === 'esperando' && (
-              <Button variant="outline" size="sm" onClick={onClose} className="ml-auto">Cerrar (sigue activo)</Button>
-            )}
-            {fase === 'pagado' && (
-              <>
-                <Button size="sm" variant="outline" className="gap-1.5 border-green-300 text-green-700"
-                  onClick={() => { onRecibo({ ...charge, estadoPago: 'pagado', folioPago: folio ?? undefined }); onClose(); }}>
-                  <Receipt className="w-3.5 h-3.5" /> Ver recibo
-                </Button>
-                <Button size="sm" variant="outline" onClick={onClose} className="ml-auto">Cerrar</Button>
-              </>
-            )}
-          </div>
-        )}
-
-        {/* Footer compacto dentro del iframe view */}
-        {showIframe && fase !== 'pagado' && (
-          <div className="px-4 pb-3 flex justify-end">
-            <Button variant="outline" size="sm" onClick={onClose} className="text-xs h-7">Cerrar (sigue activo)</Button>
-          </div>
-        )}
+        <div className="px-6 pb-5 flex items-center justify-between gap-3">
+          {fase === 'inicio' && (
+            <>
+              <Button variant="outline" size="sm" onClick={onClose} disabled={loading}>Cancelar</Button>
+              <Button size="sm" onClick={handleCrearCobro} disabled={loading} className="bg-green-600 hover:bg-green-700 gap-1.5">
+                {loading
+                  ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Generando…</>
+                  : <><CreditCard className="w-3.5 h-3.5" /> Generar cobro</>}
+              </Button>
+            </>
+          )}
+          {fase === 'esperando' && (
+            <Button variant="outline" size="sm" onClick={onClose} className="ml-auto">Cerrar (sigue activo)</Button>
+          )}
+          {fase === 'pagado' && (
+            <>
+              <Button size="sm" variant="outline" className="gap-1.5 border-green-300 text-green-700"
+                onClick={() => { onRecibo({ ...charge, estadoPago: 'pagado', folioPago: folio ?? undefined }); onClose(); }}>
+                <Receipt className="w-3.5 h-3.5" /> Ver recibo
+              </Button>
+              <Button size="sm" variant="outline" onClick={onClose} className="ml-auto">Cerrar</Button>
+            </>
+          )}
+        </div>
 
         <div className="px-6 pb-3 text-center text-[10px] text-gray-300">
           Cobranza real PorCobrar (stage) · posteo a Catastro simulado · flujo idéntico a producción
