@@ -154,32 +154,15 @@ function handleUpstreamError(err, res) {
 const app = express();
 app.use(express.json());
 
-// CORS — allow frontend origins (localhost dev + any production domain)
-const ALLOWED_ORIGINS = (process.env.CORS_ORIGINS || '')
-  .split(',')
-  .map(s => s.trim())
-  .filter(Boolean);
-
+// CORS — open for MVP demo (frontend and backend on separate domains)
 app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  // Always allow localhost/local dev
-  const isLocal = !origin
-    || origin.startsWith('http://localhost')
-    || origin.startsWith('http://127.0.0.1');
-  // Allow any configured origin, or any easypanel/sslip.io domain automatically
-  const isAllowed = isLocal
-    || ALLOWED_ORIGINS.includes(origin)
-    || /easypanel\.host$/.test(origin)
-    || /sslip\.io$/.test(origin)
-    || /humansoftware\.mx$/.test(origin);
-
-  if (isAllowed) {
-    res.setHeader('Access-Control-Allow-Origin', origin || '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-  }
-  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  const origin = req.headers.origin || '*';
+  res.setHeader('Access-Control-Allow-Origin', origin);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Vary', 'Origin');
+  if (req.method === 'OPTIONS') return res.status(204).end();
   next();
 });
 
