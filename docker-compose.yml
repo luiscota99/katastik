@@ -23,7 +23,7 @@ services:
       - path: ./apps/api/.env
         required: false
     environment:
-      PORT: "8000"
+      PORT: "8000"   # override Dockerfile default (80) for local dev
       DATA_DIR: /app/data/demo
       # Sobreescribe aquí o en apps/api/.env:
       # CATASTRO_SOURCE: "real"

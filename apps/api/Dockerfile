@@ -11,8 +11,8 @@ COPY apps/api/package.json ./
 RUN npm install --omit=dev
 COPY apps/api/src ./src
 
-EXPOSE 8000
-ENV PORT=8000
+EXPOSE 80
+ENV PORT=80
 ENV DATA_DIR=/app/data/demo
 
 CMD ["node", "src/index.js"]
