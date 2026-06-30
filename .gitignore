@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Builds
+apps/web/dist/
+apps/*/dist/
+
+# Variables de entorno — NUNCA subir tokens ni credenciales
+**/.env
+!**/.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml

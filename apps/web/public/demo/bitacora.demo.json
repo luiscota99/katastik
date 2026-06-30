@@ -1,0 +1,202 @@
+[
+  {
+    "id": "LOG-0001",
+    "predioId": "PUE-DEMO-0001",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0002",
+    "predioId": "PUE-DEMO-0002",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0003",
+    "predioId": "PUE-DEMO-0003",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0004",
+    "predioId": "PUE-DEMO-0004",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0005",
+    "predioId": "PUE-DEMO-0005",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0006",
+    "predioId": "PUE-DEMO-0006",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0007",
+    "predioId": "PUE-DEMO-0007",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0008",
+    "predioId": "PUE-DEMO-0008",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0009",
+    "predioId": "PUE-DEMO-0009",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0010",
+    "predioId": "PUE-DEMO-0010",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0011",
+    "predioId": "PUE-DEMO-0011",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0012",
+    "predioId": "PUE-DEMO-0012",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0013",
+    "predioId": "PUE-DEMO-0013",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0014",
+    "predioId": "PUE-DEMO-0014",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0015",
+    "predioId": "PUE-DEMO-0015",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0016",
+    "predioId": "PUE-DEMO-0016",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0017",
+    "predioId": "PUE-DEMO-0017",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0018",
+    "predioId": "PUE-DEMO-0018",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0019",
+    "predioId": "PUE-DEMO-0019",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0020",
+    "predioId": "PUE-DEMO-0020",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0021",
+    "predioId": "PUE-DEMO-0021",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0022",
+    "predioId": "PUE-DEMO-0022",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0023",
+    "predioId": "PUE-DEMO-0023",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0024",
+    "predioId": "PUE-DEMO-0024",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  },
+  {
+    "id": "LOG-0025",
+    "predioId": "PUE-DEMO-0025",
+    "evento": "Carga inicial demo",
+    "usuario": "sistema-demo",
+    "fechaHora": "2026-06-26T18:00:00",
+    "detalle": "Predio ficticio creado para MVP Catastro Puebla."
+  }
+]

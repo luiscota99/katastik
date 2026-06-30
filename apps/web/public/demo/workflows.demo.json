@@ -1,0 +1,327 @@
+[
+  {
+    "id": "TRM-0001",
+    "predioId": "PUE-DEMO-0001",
+    "tipo": "Actualizacion de expediente",
+    "estado": "en_revision",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-11",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0002",
+    "predioId": "PUE-DEMO-0002",
+    "tipo": "Actualizacion de expediente",
+    "estado": "listo_para_firma",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-12",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0003",
+    "predioId": "PUE-DEMO-0003",
+    "tipo": "Actualizacion de expediente",
+    "estado": "cerrado",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-13",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0004",
+    "predioId": "PUE-DEMO-0004",
+    "tipo": "Actualizacion de expediente",
+    "estado": "nuevo",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-14",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0005",
+    "predioId": "PUE-DEMO-0005",
+    "tipo": "Actualizacion de expediente",
+    "estado": "en_revision",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-15",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0006",
+    "predioId": "PUE-DEMO-0006",
+    "tipo": "Actualizacion de expediente",
+    "estado": "listo_para_firma",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-16",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0007",
+    "predioId": "PUE-DEMO-0007",
+    "tipo": "Actualizacion de expediente",
+    "estado": "cerrado",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-17",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0008",
+    "predioId": "PUE-DEMO-0008",
+    "tipo": "Actualizacion de expediente",
+    "estado": "nuevo",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-18",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0009",
+    "predioId": "PUE-DEMO-0009",
+    "tipo": "Actualizacion de expediente",
+    "estado": "en_revision",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-19",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0010",
+    "predioId": "PUE-DEMO-0010",
+    "tipo": "Actualizacion de expediente",
+    "estado": "listo_para_firma",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-10",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0011",
+    "predioId": "PUE-DEMO-0011",
+    "tipo": "Actualizacion de expediente",
+    "estado": "cerrado",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-11",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0012",
+    "predioId": "PUE-DEMO-0012",
+    "tipo": "Actualizacion de expediente",
+    "estado": "nuevo",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-12",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0013",
+    "predioId": "PUE-DEMO-0013",
+    "tipo": "Actualizacion de expediente",
+    "estado": "en_revision",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-13",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0014",
+    "predioId": "PUE-DEMO-0014",
+    "tipo": "Actualizacion de expediente",
+    "estado": "listo_para_firma",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-14",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0015",
+    "predioId": "PUE-DEMO-0015",
+    "tipo": "Actualizacion de expediente",
+    "estado": "cerrado",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-15",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0016",
+    "predioId": "PUE-DEMO-0016",
+    "tipo": "Actualizacion de expediente",
+    "estado": "nuevo",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-16",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0017",
+    "predioId": "PUE-DEMO-0017",
+    "tipo": "Actualizacion de expediente",
+    "estado": "en_revision",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-17",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0018",
+    "predioId": "PUE-DEMO-0018",
+    "tipo": "Actualizacion de expediente",
+    "estado": "listo_para_firma",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-18",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0019",
+    "predioId": "PUE-DEMO-0019",
+    "tipo": "Actualizacion de expediente",
+    "estado": "cerrado",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-19",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0020",
+    "predioId": "PUE-DEMO-0020",
+    "tipo": "Actualizacion de expediente",
+    "estado": "nuevo",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-10",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0021",
+    "predioId": "PUE-DEMO-0021",
+    "tipo": "Actualizacion de expediente",
+    "estado": "en_revision",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-11",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0022",
+    "predioId": "PUE-DEMO-0022",
+    "tipo": "Actualizacion de expediente",
+    "estado": "listo_para_firma",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-12",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0023",
+    "predioId": "PUE-DEMO-0023",
+    "tipo": "Actualizacion de expediente",
+    "estado": "cerrado",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-13",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0024",
+    "predioId": "PUE-DEMO-0024",
+    "tipo": "Actualizacion de expediente",
+    "estado": "nuevo",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-14",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  },
+  {
+    "id": "TRM-0025",
+    "predioId": "PUE-DEMO-0025",
+    "tipo": "Actualizacion de expediente",
+    "estado": "en_revision",
+    "responsable": "Mesa Catastro Demo",
+    "fechaIngreso": "2026-06-15",
+    "documentosRequeridos": [
+      "Escritura",
+      "Identificacion",
+      "Comprobante predial"
+    ]
+  }
+]

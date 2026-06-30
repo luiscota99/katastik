@@ -1,0 +1,1003 @@
+[
+  {
+    "id": "TRM-01001002-CNA",
+    "predioId": "0078000101001002",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2026-02-23",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $116,256 MXN en 19 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01001012-CNA",
+    "predioId": "0078000101001012",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "Lic. Morales Cruz",
+    "fechaIngreso": "2026-01-11",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $36,177 MXN en 26 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01001012-TRD",
+    "predioId": "0078000101001012",
+    "tipo": "Traslado de Dominio",
+    "estado": "pendiente_firma",
+    "responsable": "Lic. Morales Cruz",
+    "fechaIngreso": "2024-11-26",
+    "documentosRequeridos": [
+      "Escritura publica notariada",
+      "Identificacion oficial",
+      "RFC",
+      "Comprobante domicilio",
+      "Plano catastral vigente"
+    ],
+    "nota": "Verificacion de escritura y planos catastrales.",
+    "etapa": "firma_director",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Recepcion de escritura publica",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Revision documental",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Valuacion de transmision",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Firma del director catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Actualizacion en padron catastral",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01001012-OTR",
+    "predioId": "0078000101001012",
+    "tipo": "Avaluo Catastral",
+    "estado": "aprobado",
+    "responsable": "Arq. Garcia Hernandez",
+    "fechaIngreso": "2023-09-19",
+    "documentosRequeridos": [
+      "Solicitud",
+      "Escritura o titulo",
+      "Planos arquitectonicos",
+      "ID oficial"
+    ],
+    "etapa": "revision_tecnica"
+  },
+  {
+    "id": "TRM-01001018-CNA",
+    "predioId": "0078000101001018",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2026-01-28",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $40,425 MXN en 9 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01001018-TRD",
+    "predioId": "0078000101001018",
+    "tipo": "Traslado de Dominio",
+    "estado": "en_revision",
+    "responsable": "Dir. Tecnico Catastral",
+    "fechaIngreso": "2024-01-24",
+    "documentosRequeridos": [
+      "Escritura publica notariada",
+      "Identificacion oficial",
+      "RFC",
+      "Comprobante domicilio",
+      "Plano catastral vigente"
+    ],
+    "nota": "Verificacion de escritura y planos catastrales.",
+    "etapa": "revision_documental",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Recepcion de escritura publica",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Revision documental",
+        "completado": false
+      },
+      {
+        "orden": 3,
+        "descripcion": "Valuacion de transmision",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Firma del director catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Actualizacion en padron catastral",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01001059-CNA",
+    "predioId": "0078000101001059",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "Ing. Perez Lopez",
+    "fechaIngreso": "2026-01-16",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $16,723 MXN en 5 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01001059-TRD",
+    "predioId": "0078000101001059",
+    "tipo": "Traslado de Dominio",
+    "estado": "aprobado",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2025-12-13",
+    "documentosRequeridos": [
+      "Escritura publica notariada",
+      "Identificacion oficial",
+      "RFC",
+      "Comprobante domicilio",
+      "Plano catastral vigente"
+    ],
+    "nota": "Verificacion de escritura y planos catastrales.",
+    "etapa": "concluido",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Recepcion de escritura publica",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Revision documental",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Valuacion de transmision",
+        "completado": true
+      },
+      {
+        "orden": 4,
+        "descripcion": "Firma del director catastral",
+        "completado": true
+      },
+      {
+        "orden": 5,
+        "descripcion": "Actualizacion en padron catastral",
+        "completado": true
+      }
+    ]
+  },
+  {
+    "id": "TRM-01001059-OTR",
+    "predioId": "0078000101001059",
+    "tipo": "Cedula Catastral",
+    "estado": "aprobado",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2025-09-02",
+    "documentosRequeridos": [
+      "Solicitud",
+      "ID oficial",
+      "Comprobante domicilio"
+    ],
+    "etapa": "emision"
+  },
+  {
+    "id": "TRM-01002001-CNA",
+    "predioId": "0078000101002001",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "Dir. Tecnico Catastral",
+    "fechaIngreso": "2026-01-08",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $469,164 MXN en 5 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01002001-TRD",
+    "predioId": "0078000101002001",
+    "tipo": "Traslado de Dominio",
+    "estado": "aprobado",
+    "responsable": "Ing. Perez Lopez",
+    "fechaIngreso": "2025-02-14",
+    "documentosRequeridos": [
+      "Escritura publica notariada",
+      "Identificacion oficial",
+      "RFC",
+      "Comprobante domicilio",
+      "Plano catastral vigente"
+    ],
+    "nota": "Verificacion de escritura y planos catastrales.",
+    "etapa": "concluido",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Recepcion de escritura publica",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Revision documental",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Valuacion de transmision",
+        "completado": true
+      },
+      {
+        "orden": 4,
+        "descripcion": "Firma del director catastral",
+        "completado": true
+      },
+      {
+        "orden": 5,
+        "descripcion": "Actualizacion en padron catastral",
+        "completado": true
+      }
+    ]
+  },
+  {
+    "id": "TRM-01002001-OTR",
+    "predioId": "0078000101002001",
+    "tipo": "Inscripcion de Declaracion de Construccion",
+    "estado": "en_revision",
+    "responsable": "Lic. Morales Cruz",
+    "fechaIngreso": "2023-12-10",
+    "documentosRequeridos": [
+      "Manifiesto de construccion",
+      "Planos autorizados",
+      "Licencia de construccion",
+      "ID oficial"
+    ],
+    "etapa": "revision_tecnica"
+  },
+  {
+    "id": "TRM-01006002-CNA",
+    "predioId": "0078000101006002",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "Arq. Garcia Hernandez",
+    "fechaIngreso": "2026-01-11",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $59,650 MXN en 5 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01006002-TRD",
+    "predioId": "0078000101006002",
+    "tipo": "Traslado de Dominio",
+    "estado": "aprobado",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2024-07-05",
+    "documentosRequeridos": [
+      "Escritura publica notariada",
+      "Identificacion oficial",
+      "RFC",
+      "Comprobante domicilio",
+      "Plano catastral vigente"
+    ],
+    "nota": "Verificacion de escritura y planos catastrales.",
+    "etapa": "concluido",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Recepcion de escritura publica",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Revision documental",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Valuacion de transmision",
+        "completado": true
+      },
+      {
+        "orden": 4,
+        "descripcion": "Firma del director catastral",
+        "completado": true
+      },
+      {
+        "orden": 5,
+        "descripcion": "Actualizacion en padron catastral",
+        "completado": true
+      }
+    ]
+  },
+  {
+    "id": "TRM-01008001-CNA",
+    "predioId": "0078000101008001",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "Ing. Perez Lopez",
+    "fechaIngreso": "2026-02-06",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $51,977 MXN en 5 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01008001-OTR",
+    "predioId": "0078000101008001",
+    "tipo": "Inscripcion de Declaracion de Construccion",
+    "estado": "en_revision",
+    "responsable": "Lic. Morales Cruz",
+    "fechaIngreso": "2026-03-08",
+    "documentosRequeridos": [
+      "Manifiesto de construccion",
+      "Planos autorizados",
+      "Licencia de construccion",
+      "ID oficial"
+    ],
+    "etapa": "revision_tecnica"
+  },
+  {
+    "id": "TRM-01026015-CNA",
+    "predioId": "0078000101026015",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "Lic. Morales Cruz",
+    "fechaIngreso": "2026-06-09",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $23,619 MXN en 5 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01026015-OTR",
+    "predioId": "0078000101026015",
+    "tipo": "Cedula Catastral",
+    "estado": "aprobado",
+    "responsable": "Dir. Tecnico Catastral",
+    "fechaIngreso": "2023-02-15",
+    "documentosRequeridos": [
+      "Solicitud",
+      "ID oficial",
+      "Comprobante domicilio"
+    ],
+    "etapa": "emision"
+  },
+  {
+    "id": "TRM-01082001-OTR",
+    "predioId": "0078000101082001",
+    "tipo": "Inscripcion de Declaracion de Construccion",
+    "estado": "aprobado",
+    "responsable": "Lic. Morales Cruz",
+    "fechaIngreso": "2024-08-28",
+    "documentosRequeridos": [
+      "Manifiesto de construccion",
+      "Planos autorizados",
+      "Licencia de construccion",
+      "ID oficial"
+    ],
+    "etapa": "revision_tecnica"
+  },
+  {
+    "id": "TRM-01097039-CNA",
+    "predioId": "0078000101097039",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2026-02-13",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $5,827 MXN en 5 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01097039-TRD",
+    "predioId": "0078000101097039",
+    "tipo": "Traslado de Dominio",
+    "estado": "en_revision",
+    "responsable": "Ing. Perez Lopez",
+    "fechaIngreso": "2024-10-12",
+    "documentosRequeridos": [
+      "Escritura publica notariada",
+      "Identificacion oficial",
+      "RFC",
+      "Comprobante domicilio",
+      "Plano catastral vigente"
+    ],
+    "nota": "Verificacion de escritura y planos catastrales.",
+    "etapa": "revision_documental",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Recepcion de escritura publica",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Revision documental",
+        "completado": false
+      },
+      {
+        "orden": 3,
+        "descripcion": "Valuacion de transmision",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Firma del director catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Actualizacion en padron catastral",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01120040-CNA",
+    "predioId": "0078000101120040",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2026-01-27",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $1,240,411 MXN en 5 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01120040-TRD",
+    "predioId": "0078000101120040",
+    "tipo": "Traslado de Dominio",
+    "estado": "aprobado",
+    "responsable": "Arq. Garcia Hernandez",
+    "fechaIngreso": "2025-11-25",
+    "documentosRequeridos": [
+      "Escritura publica notariada",
+      "Identificacion oficial",
+      "RFC",
+      "Comprobante domicilio",
+      "Plano catastral vigente"
+    ],
+    "nota": "Verificacion de escritura y planos catastrales.",
+    "etapa": "concluido",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Recepcion de escritura publica",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Revision documental",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Valuacion de transmision",
+        "completado": true
+      },
+      {
+        "orden": 4,
+        "descripcion": "Firma del director catastral",
+        "completado": true
+      },
+      {
+        "orden": 5,
+        "descripcion": "Actualizacion en padron catastral",
+        "completado": true
+      }
+    ]
+  },
+  {
+    "id": "TRM-01120040-OTR",
+    "predioId": "0078000101120040",
+    "tipo": "Avaluo Catastral",
+    "estado": "aprobado",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2023-10-26",
+    "documentosRequeridos": [
+      "Solicitud",
+      "Escritura o titulo",
+      "Planos arquitectonicos",
+      "ID oficial"
+    ],
+    "etapa": "revision_tecnica"
+  },
+  {
+    "id": "TRM-01199005-CNA",
+    "predioId": "0078000101199005",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "C. Jimenez Ruiz",
+    "fechaIngreso": "2026-02-21",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $16,484 MXN en 4 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01248009-CNA",
+    "predioId": "0078000101248009",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "Ing. Perez Lopez",
+    "fechaIngreso": "2026-06-04",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $11,303 MXN en 5 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01248009-TRD",
+    "predioId": "0078000101248009",
+    "tipo": "Traslado de Dominio",
+    "estado": "pendiente_firma",
+    "responsable": "Arq. Garcia Hernandez",
+    "fechaIngreso": "2024-08-02",
+    "documentosRequeridos": [
+      "Escritura publica notariada",
+      "Identificacion oficial",
+      "RFC",
+      "Comprobante domicilio",
+      "Plano catastral vigente"
+    ],
+    "nota": "Verificacion de escritura y planos catastrales.",
+    "etapa": "firma_director",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Recepcion de escritura publica",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Revision documental",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Valuacion de transmision",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Firma del director catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Actualizacion en padron catastral",
+        "completado": false
+      }
+    ]
+  },
+  {
+    "id": "TRM-01394010-CNA",
+    "predioId": "0078000101394010",
+    "tipo": "Constancia de No Adeudo",
+    "estado": "pendiente_firma",
+    "responsable": "Ing. Perez Lopez",
+    "fechaIngreso": "2026-01-10",
+    "documentosRequeridos": [
+      "Solicitud firmada por propietario",
+      "Identificacion oficial vigente",
+      "CCO del predio"
+    ],
+    "nota": "Pendiente de liquidar $16,836 MXN en 4 bimestres.",
+    "etapa": "pago_pendiente",
+    "pasos": [
+      {
+        "orden": 1,
+        "descripcion": "Verificacion de adeudo en sistema",
+        "completado": true
+      },
+      {
+        "orden": 2,
+        "descripcion": "Generacion de referencia de pago",
+        "completado": true
+      },
+      {
+        "orden": 3,
+        "descripcion": "Recepcion y validacion del pago",
+        "completado": false
+      },
+      {
+        "orden": 4,
+        "descripcion": "Emision de constancia catastral",
+        "completado": false
+      },
+      {
+        "orden": 5,
+        "descripcion": "Firma electronica NOM-151",
+        "completado": false
+      }
+    ]
+  }
+]

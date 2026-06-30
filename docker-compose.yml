@@ -1,0 +1,57 @@
+# Katastik — Plataforma Digital de Gestión Catastral
+#
+# Uso local:
+#   docker compose up -d --build
+#
+# Producción (VPS / cloud):
+#   1. Copia apps/api/.env.example → apps/api/.env y rellena los tokens
+#   2. docker compose -f docker-compose.yml up -d --build
+#
+# URLs:
+#   Web:  http://localhost:3000  (o puerto 80 si cambias el mapping)
+#   API:  http://localhost:8000
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: katastik-api
+    # Carga apps/api/.env si existe; las variables de `environment` tienen precedencia.
+    # En producción puedes omitir env_file y setear todo desde el panel de la plataforma.
+    env_file:
+      - path: ./apps/api/.env
+        required: false
+    environment:
+      PORT: "8000"
+      DATA_DIR: /app/data/demo
+      # Sobreescribe aquí o en apps/api/.env:
+      # CATASTRO_SOURCE: "real"
+      # CATASTRO_BASE_URL: "http://..."
+      # PORCOBRAR_WEBHOOK_PUBLIC_URL: "https://tu-dominio.com"
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8000/api/dashboard"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        VITE_CATASTRO_MODE: api
+    container_name: katastik-web
+    environment:
+      # Si el backend está en otro host (ej. plataforma cloud), cambia esto:
+      API_UPSTREAM: "api:8000"
+    ports:
+      - "3000:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped

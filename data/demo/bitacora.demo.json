@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "BIT-01001002-0000",
+    "predioId": "0078000101001002",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2015-03-27T12:15:00",
+    "detalle": "Alta inicial — CCO 0078000101001002 — JUVENCIO DIAZ SANTIAGO"
+  },
+  {
+    "id": "BIT-01001002-0001",
+    "predioId": "0078000101001002",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2015-08-03T13:20:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101001002"
+  },
+  {
+    "id": "BIT-01001002-0002",
+    "predioId": "0078000101001002",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2015-10-29T16:05:00",
+    "detalle": "Constancia emitida — CCO 0078000101001002 — JUVENCIO DIAZ SANTIAGO"
+  },
+  {
+    "id": "BIT-01001002-0003",
+    "predioId": "0078000101001002",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2015-11-16T10:14:00",
+    "detalle": "Adeudo total: $116,256 MXN — 19 bimestres desde 2008"
+  },
+  {
+    "id": "BIT-01001002-0004",
+    "predioId": "0078000101001002",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2015-11-27T10:45:00",
+    "detalle": "CCO 0078000101001002 — Propietario: JUVENCIO DIAZ SANTIAGO"
+  },
+  {
+    "id": "BIT-01001002-0005",
+    "predioId": "0078000101001002",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2015-12-08T09:26:00",
+    "detalle": "Ref. generada por $116,256 MXN"
+  },
+  {
+    "id": "BIT-01001002-0006",
+    "predioId": "0078000101001002",
+    "evento": "Pago parcial de adeudo predial recibido",
+    "usuario": "caja",
+    "fechaHora": "2016-01-21T15:26:00",
+    "detalle": "$65,238 MXN — 9 bimestres liquidados"
+  },
+  {
+    "id": "BIT-01001002-0007",
+    "predioId": "0078000101001002",
+    "evento": "Solicitud de prescripcion de adeudo ingresada",
+    "usuario": "ventanilla",
+    "fechaHora": "2016-02-27T11:53:00",
+    "detalle": "Adeudos desde 2008 — expediente abierto"
+  },
+  {
+    "id": "BIT-01001002-0008",
+    "predioId": "0078000101001002",
+    "evento": "Documento enviado a firma electronica (Cincel)",
+    "usuario": "operador-catastro",
+    "fechaHora": "2016-04-14T08:54:00",
+    "detalle": "CCO 0078000101001002 — Pendiente de firma del propietario"
+  },
+  {
+    "id": "BIT-01001002-0009",
+    "predioId": "0078000101001002",
+    "evento": "Firma electronica NOM-151 completada",
+    "usuario": "sistema",
+    "fechaHora": "2016-04-19T14:30:00",
+    "detalle": "Documento firmado — CCO 0078000101001002"
+  },
+  {
+    "id": "BIT-01001002-0010",
+    "predioId": "0078000101001002",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2016-11-06T13:19:00",
+    "detalle": "Ejercicio 2016 — CCO 0078000101001002"
+  },
+  {
+    "id": "BIT-01001002-0011",
+    "predioId": "0078000101001002",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2016-12-01T14:54:00",
+    "detalle": "Acceso registrado — CCO 0078000101001002"
+  },
+  {
+    "id": "BIT-01001012-0012",
+    "predioId": "0078000101001012",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2017-07-30T17:57:00",
+    "detalle": "Alta inicial — CCO 0078000101001012 — ANA AURELIA M SANCHEZ DIAZ"
+  },
+  {
+    "id": "BIT-01001012-0013",
+    "predioId": "0078000101001012",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2017-11-23T15:14:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101001012"
+  },
+  {
+    "id": "BIT-01001012-0014",
+    "predioId": "0078000101001012",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2018-01-09T14:31:00",
+    "detalle": "Constancia emitida — CCO 0078000101001012 — ANA AURELIA M SANCHEZ DIAZ"
+  },
+  {
+    "id": "BIT-01001012-0015",
+    "predioId": "0078000101001012",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2018-01-20T14:21:00",
+    "detalle": "Adeudo total: $36,177 MXN — 26 bimestres desde 2001"
+  },
+  {
+    "id": "BIT-01001012-0016",
+    "predioId": "0078000101001012",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2018-02-04T14:46:00",
+    "detalle": "CCO 0078000101001012 — Propietario: ANA AURELIA M SANCHEZ DIAZ"
+  },
+  {
+    "id": "BIT-01001012-0017",
+    "predioId": "0078000101001012",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2018-02-14T15:58:00",
+    "detalle": "Ref. generada por $36,177 MXN"
+  },
+  {
+    "id": "BIT-01001012-0018",
+    "predioId": "0078000101001012",
+    "evento": "Solicitud de prescripcion de adeudo ingresada",
+    "usuario": "ventanilla",
+    "fechaHora": "2018-06-03T16:01:00",
+    "detalle": "Adeudos desde 2001 — expediente abierto"
+  },
+  {
+    "id": "BIT-01001012-0019",
+    "predioId": "0078000101001012",
+    "evento": "Ingreso de tramite - Traslado de Dominio",
+    "usuario": "ventanilla",
+    "fechaHora": "2018-09-14T09:41:00",
+    "detalle": "CCO 0078000101001012 — Nuevo propietario en proceso"
+  },
+  {
+    "id": "BIT-01001012-0020",
+    "predioId": "0078000101001012",
+    "evento": "Revision documental de escritura publica",
+    "usuario": "operador-catastro",
+    "fechaHora": "2018-09-23T10:55:00",
+    "detalle": "Verificacion — CCO 0078000101001012"
+  },
+  {
+    "id": "BIT-01001012-0021",
+    "predioId": "0078000101001012",
+    "evento": "Traslado de Dominio aprobado",
+    "usuario": "director-catastro",
+    "fechaHora": "2018-10-12T10:03:00",
+    "detalle": "CCO 0078000101001012 — Actualizado en padron"
+  },
+  {
+    "id": "BIT-01001012-0022",
+    "predioId": "0078000101001012",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2019-07-22T11:29:00",
+    "detalle": "Ejercicio 2019 — CCO 0078000101001012"
+  },
+  {
+    "id": "BIT-01001012-0023",
+    "predioId": "0078000101001012",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2019-08-02T13:48:00",
+    "detalle": "Acceso registrado — CCO 0078000101001012"
+  },
+  {
+    "id": "BIT-01001018-0024",
+    "predioId": "0078000101001018",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2017-05-15T12:53:00",
+    "detalle": "Alta inicial — CCO 0078000101001018 — EPIGMENIO DIAZ ROSALES"
+  },
+  {
+    "id": "BIT-01001018-0025",
+    "predioId": "0078000101001018",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2017-08-03T15:01:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101001018"
+  },
+  {
+    "id": "BIT-01001018-0026",
+    "predioId": "0078000101001018",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2017-10-19T16:03:00",
+    "detalle": "Constancia emitida — CCO 0078000101001018 — EPIGMENIO DIAZ ROSALES"
+  },
+  {
+    "id": "BIT-01001018-0027",
+    "predioId": "0078000101001018",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2017-11-20T11:41:00",
+    "detalle": "Adeudo total: $40,425 MXN — 9 bimestres desde 2018"
+  },
+  {
+    "id": "BIT-01001018-0028",
+    "predioId": "0078000101001018",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2017-11-26T08:48:00",
+    "detalle": "CCO 0078000101001018 — Propietario: EPIGMENIO DIAZ ROSALES"
+  },
+  {
+    "id": "BIT-01001018-0029",
+    "predioId": "0078000101001018",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2017-12-01T11:12:00",
+    "detalle": "Ref. generada por $40,425 MXN"
+  },
+  {
+    "id": "BIT-01001018-0030",
+    "predioId": "0078000101001018",
+    "evento": "Pago parcial de adeudo predial recibido",
+    "usuario": "caja",
+    "fechaHora": "2018-01-19T10:15:00",
+    "detalle": "$23,904 MXN — 4 bimestres liquidados"
+  },
+  {
+    "id": "BIT-01001018-0031",
+    "predioId": "0078000101001018",
+    "evento": "Documento enviado a firma electronica (Cincel)",
+    "usuario": "operador-catastro",
+    "fechaHora": "2018-03-06T11:29:00",
+    "detalle": "CCO 0078000101001018 — Pendiente de firma del propietario"
+  },
+  {
+    "id": "BIT-01001018-0032",
+    "predioId": "0078000101001018",
+    "evento": "Firma electronica NOM-151 completada",
+    "usuario": "sistema",
+    "fechaHora": "2018-03-09T13:10:00",
+    "detalle": "Documento firmado — CCO 0078000101001018"
+  },
+  {
+    "id": "BIT-01001018-0033",
+    "predioId": "0078000101001018",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2019-02-27T17:47:00",
+    "detalle": "Ejercicio 2019 — CCO 0078000101001018"
+  },
+  {
+    "id": "BIT-01001018-0034",
+    "predioId": "0078000101001018",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2019-03-22T09:49:00",
+    "detalle": "Acceso registrado — CCO 0078000101001018"
+  },
+  {
+    "id": "BIT-01001059-0035",
+    "predioId": "0078000101001059",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2015-05-25T08:59:00",
+    "detalle": "Alta inicial — CCO 0078000101001059 — NICOLAS TOM PALE"
+  },
+  {
+    "id": "BIT-01001059-0036",
+    "predioId": "0078000101001059",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2015-10-11T17:43:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101001059"
+  },
+  {
+    "id": "BIT-01001059-0037",
+    "predioId": "0078000101001059",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2016-01-07T14:25:00",
+    "detalle": "Constancia emitida — CCO 0078000101001059 — NICOLAS TOM PALE"
+  },
+  {
+    "id": "BIT-01001059-0038",
+    "predioId": "0078000101001059",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2016-03-02T11:04:00",
+    "detalle": "Adeudo total: $16,723 MXN — 5 bimestres desde 2022"
+  },
+  {
+    "id": "BIT-01001059-0039",
+    "predioId": "0078000101001059",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2016-03-16T11:06:00",
+    "detalle": "CCO 0078000101001059 — Propietario: NICOLAS TOM PALE"
+  },
+  {
+    "id": "BIT-01001059-0040",
+    "predioId": "0078000101001059",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2016-04-12T12:54:00",
+    "detalle": "Ref. generada por $16,723 MXN"
+  },
+  {
+    "id": "BIT-01001059-0041",
+    "predioId": "0078000101001059",
+    "evento": "Ingreso de tramite - Traslado de Dominio",
+    "usuario": "ventanilla",
+    "fechaHora": "2016-09-10T17:50:00",
+    "detalle": "CCO 0078000101001059 — Nuevo propietario en proceso"
+  },
+  {
+    "id": "BIT-01001059-0042",
+    "predioId": "0078000101001059",
+    "evento": "Revision documental de escritura publica",
+    "usuario": "operador-catastro",
+    "fechaHora": "2016-09-13T13:34:00",
+    "detalle": "Verificacion — CCO 0078000101001059"
+  },
+  {
+    "id": "BIT-01001059-0043",
+    "predioId": "0078000101001059",
+    "evento": "Traslado de Dominio aprobado",
+    "usuario": "director-catastro",
+    "fechaHora": "2016-10-01T13:04:00",
+    "detalle": "CCO 0078000101001059 — Actualizado en padron"
+  },
+  {
+    "id": "BIT-01001059-0044",
+    "predioId": "0078000101001059",
+    "evento": "Documento enviado a firma electronica (Cincel)",
+    "usuario": "operador-catastro",
+    "fechaHora": "2016-11-01T08:54:00",
+    "detalle": "CCO 0078000101001059 — Pendiente de firma del propietario"
+  },
+  {
+    "id": "BIT-01001059-0045",
+    "predioId": "0078000101001059",
+    "evento": "Firma electronica NOM-151 completada",
+    "usuario": "sistema",
+    "fechaHora": "2016-11-05T15:06:00",
+    "detalle": "Documento firmado — CCO 0078000101001059"
+  },
+  {
+    "id": "BIT-01001059-0046",
+    "predioId": "0078000101001059",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2017-09-11T13:40:00",
+    "detalle": "Ejercicio 2017 — CCO 0078000101001059"
+  },
+  {
+    "id": "BIT-01001059-0047",
+    "predioId": "0078000101001059",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2017-10-10T15:45:00",
+    "detalle": "Acceso registrado — CCO 0078000101001059"
+  },
+  {
+    "id": "BIT-01002001-0048",
+    "predioId": "0078000101002001",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2015-06-18T12:39:00",
+    "detalle": "Alta inicial — CCO 0078000101002001 — MANUEL DIAZ LOPEZ"
+  },
+  {
+    "id": "BIT-01002001-0049",
+    "predioId": "0078000101002001",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2016-01-01T15:29:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101002001"
+  },
+  {
+    "id": "BIT-01002001-0050",
+    "predioId": "0078000101002001",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2016-02-27T17:17:00",
+    "detalle": "Constancia emitida — CCO 0078000101002001 — MANUEL DIAZ LOPEZ"
+  },
+  {
+    "id": "BIT-01002001-0051",
+    "predioId": "0078000101002001",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2016-03-28T11:53:00",
+    "detalle": "Adeudo total: $469,164 MXN — 5 bimestres desde 2022"
+  },
+  {
+    "id": "BIT-01002001-0052",
+    "predioId": "0078000101002001",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2016-04-03T12:56:00",
+    "detalle": "CCO 0078000101002001 — Propietario: MANUEL DIAZ LOPEZ"
+  },
+  {
+    "id": "BIT-01002001-0053",
+    "predioId": "0078000101002001",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2016-04-22T11:48:00",
+    "detalle": "Ref. generada por $469,164 MXN"
+  },
+  {
+    "id": "BIT-01002001-0054",
+    "predioId": "0078000101002001",
+    "evento": "Documento enviado a firma electronica (Cincel)",
+    "usuario": "operador-catastro",
+    "fechaHora": "2016-05-26T13:01:00",
+    "detalle": "CCO 0078000101002001 — Pendiente de firma del propietario"
+  },
+  {
+    "id": "BIT-01002001-0055",
+    "predioId": "0078000101002001",
+    "evento": "Firma electronica NOM-151 completada",
+    "usuario": "sistema",
+    "fechaHora": "2016-05-30T13:11:00",
+    "detalle": "Documento firmado — CCO 0078000101002001"
+  },
+  {
+    "id": "BIT-01002001-0056",
+    "predioId": "0078000101002001",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2017-04-19T11:22:00",
+    "detalle": "Ejercicio 2017 — CCO 0078000101002001"
+  },
+  {
+    "id": "BIT-01002001-0057",
+    "predioId": "0078000101002001",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2017-05-15T12:21:00",
+    "detalle": "Acceso registrado — CCO 0078000101002001"
+  },
+  {
+    "id": "BIT-01006002-0058",
+    "predioId": "0078000101006002",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2016-06-26T16:00:00",
+    "detalle": "Alta inicial — CCO 0078000101006002 — ABRAHAM LISANDRO"
+  },
+  {
+    "id": "BIT-01006002-0059",
+    "predioId": "0078000101006002",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2017-01-04T11:05:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101006002"
+  },
+  {
+    "id": "BIT-01006002-0060",
+    "predioId": "0078000101006002",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2017-02-18T14:31:00",
+    "detalle": "Constancia emitida — CCO 0078000101006002 — ABRAHAM LISANDRO"
+  },
+  {
+    "id": "BIT-01006002-0061",
+    "predioId": "0078000101006002",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2017-04-04T11:44:00",
+    "detalle": "Adeudo total: $59,650 MXN — 5 bimestres desde 2022"
+  },
+  {
+    "id": "BIT-01006002-0062",
+    "predioId": "0078000101006002",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2017-04-16T15:28:00",
+    "detalle": "CCO 0078000101006002 — Propietario: ABRAHAM LISANDRO"
+  },
+  {
+    "id": "BIT-01006002-0063",
+    "predioId": "0078000101006002",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2017-05-16T08:05:00",
+    "detalle": "Ref. generada por $59,650 MXN"
+  },
+  {
+    "id": "BIT-01006002-0064",
+    "predioId": "0078000101006002",
+    "evento": "Documento enviado a firma electronica (Cincel)",
+    "usuario": "operador-catastro",
+    "fechaHora": "2017-06-10T12:42:00",
+    "detalle": "CCO 0078000101006002 — Pendiente de firma del propietario"
+  },
+  {
+    "id": "BIT-01006002-0065",
+    "predioId": "0078000101006002",
+    "evento": "Firma electronica NOM-151 completada",
+    "usuario": "sistema",
+    "fechaHora": "2017-06-15T13:30:00",
+    "detalle": "Documento firmado — CCO 0078000101006002"
+  },
+  {
+    "id": "BIT-01006002-0066",
+    "predioId": "0078000101006002",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2018-05-22T16:22:00",
+    "detalle": "Ejercicio 2018 — CCO 0078000101006002"
+  },
+  {
+    "id": "BIT-01006002-0067",
+    "predioId": "0078000101006002",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2018-06-05T16:21:00",
+    "detalle": "Acceso registrado — CCO 0078000101006002"
+  },
+  {
+    "id": "BIT-01007001-0068",
+    "predioId": "0078000101007001",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2016-07-22T12:16:00",
+    "detalle": "Alta inicial — CCO 0078000101007001 — EXENTO MUNICIPIO"
+  },
+  {
+    "id": "BIT-01007001-0069",
+    "predioId": "0078000101007001",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2016-11-18T09:46:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101007001"
+  },
+  {
+    "id": "BIT-01007001-0070",
+    "predioId": "0078000101007001",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2016-12-30T13:07:00",
+    "detalle": "Constancia emitida — CCO 0078000101007001 — EXENTO MUNICIPIO"
+  },
+  {
+    "id": "BIT-01007001-0071",
+    "predioId": "0078000101007001",
+    "evento": "Resolucion de exencion predial emitida",
+    "usuario": "director-catastro",
+    "fechaHora": "2017-03-17T16:48:00",
+    "detalle": "Predio declarado exento — CCO 0078000101007001"
+  },
+  {
+    "id": "BIT-01007001-0072",
+    "predioId": "0078000101007001",
+    "evento": "Registro de exencion en padron",
+    "usuario": "sistema",
+    "fechaHora": "2017-03-22T10:12:00",
+    "detalle": "Actualizacion de estatus — CCO 0078000101007001"
+  },
+  {
+    "id": "BIT-01007001-0073",
+    "predioId": "0078000101007001",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2018-02-08T12:46:00",
+    "detalle": "Ejercicio 2018 — CCO 0078000101007001"
+  },
+  {
+    "id": "BIT-01007001-0074",
+    "predioId": "0078000101007001",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2018-02-27T16:38:00",
+    "detalle": "Acceso registrado — CCO 0078000101007001"
+  },
+  {
+    "id": "BIT-01008001-0075",
+    "predioId": "0078000101008001",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2016-02-17T12:14:00",
+    "detalle": "Alta inicial — CCO 0078000101008001 — HERNAN PEDRERO ARCOS"
+  },
+  {
+    "id": "BIT-01008001-0076",
+    "predioId": "0078000101008001",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2016-07-18T10:19:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101008001"
+  },
+  {
+    "id": "BIT-01008001-0077",
+    "predioId": "0078000101008001",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2016-08-17T16:08:00",
+    "detalle": "Constancia emitida — CCO 0078000101008001 — HERNAN PEDRERO ARCOS"
+  },
+  {
+    "id": "BIT-01008001-0078",
+    "predioId": "0078000101008001",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2016-09-13T08:03:00",
+    "detalle": "Adeudo total: $51,977 MXN — 5 bimestres desde 2022"
+  },
+  {
+    "id": "BIT-01008001-0079",
+    "predioId": "0078000101008001",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2016-09-26T12:44:00",
+    "detalle": "CCO 0078000101008001 — Propietario: HERNAN PEDRERO ARCOS"
+  },
+  {
+    "id": "BIT-01008001-0080",
+    "predioId": "0078000101008001",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2016-10-05T15:06:00",
+    "detalle": "Ref. generada por $51,977 MXN"
+  },
+  {
+    "id": "BIT-01008001-0081",
+    "predioId": "0078000101008001",
+    "evento": "Ingreso de tramite - Traslado de Dominio",
+    "usuario": "ventanilla",
+    "fechaHora": "2017-05-28T15:30:00",
+    "detalle": "CCO 0078000101008001 — Nuevo propietario en proceso"
+  },
+  {
+    "id": "BIT-01008001-0082",
+    "predioId": "0078000101008001",
+    "evento": "Revision documental de escritura publica",
+    "usuario": "operador-catastro",
+    "fechaHora": "2017-06-07T13:11:00",
+    "detalle": "Verificacion — CCO 0078000101008001"
+  },
+  {
+    "id": "BIT-01008001-0083",
+    "predioId": "0078000101008001",
+    "evento": "Traslado de Dominio aprobado",
+    "usuario": "director-catastro",
+    "fechaHora": "2017-06-13T12:55:00",
+    "detalle": "CCO 0078000101008001 — Actualizado en padron"
+  },
+  {
+    "id": "BIT-01008001-0084",
+    "predioId": "0078000101008001",
+    "evento": "Documento enviado a firma electronica (Cincel)",
+    "usuario": "operador-catastro",
+    "fechaHora": "2017-06-27T14:31:00",
+    "detalle": "CCO 0078000101008001 — Pendiente de firma del propietario"
+  },
+  {
+    "id": "BIT-01008001-0085",
+    "predioId": "0078000101008001",
+    "evento": "Firma electronica NOM-151 completada",
+    "usuario": "sistema",
+    "fechaHora": "2017-06-28T17:40:00",
+    "detalle": "Documento firmado — CCO 0078000101008001"
+  },
+  {
+    "id": "BIT-01008001-0086",
+    "predioId": "0078000101008001",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2018-07-08T08:09:00",
+    "detalle": "Ejercicio 2018 — CCO 0078000101008001"
+  },
+  {
+    "id": "BIT-01008001-0087",
+    "predioId": "0078000101008001",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2018-07-13T17:19:00",
+    "detalle": "Acceso registrado — CCO 0078000101008001"
+  },
+  {
+    "id": "BIT-01026015-0088",
+    "predioId": "0078000101026015",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2014-04-24T14:38:00",
+    "detalle": "Alta inicial — CCO 0078000101026015 — FRANCISCO JAVIER RODRIGUEZ"
+  },
+  {
+    "id": "BIT-01026015-0089",
+    "predioId": "0078000101026015",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2014-08-19T16:24:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101026015"
+  },
+  {
+    "id": "BIT-01026015-0090",
+    "predioId": "0078000101026015",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2014-10-16T15:19:00",
+    "detalle": "Constancia emitida — CCO 0078000101026015 — FRANCISCO JAVIER RODRIGUEZ"
+  },
+  {
+    "id": "BIT-01026015-0091",
+    "predioId": "0078000101026015",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2014-12-02T14:19:00",
+    "detalle": "Adeudo total: $23,619 MXN — 5 bimestres desde 2022"
+  },
+  {
+    "id": "BIT-01026015-0092",
+    "predioId": "0078000101026015",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2014-12-16T17:03:00",
+    "detalle": "CCO 0078000101026015 — Propietario: FRANCISCO JAVIER RODRIGUEZ"
+  },
+  {
+    "id": "BIT-01026015-0093",
+    "predioId": "0078000101026015",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2015-01-09T09:48:00",
+    "detalle": "Ref. generada por $23,619 MXN"
+  },
+  {
+    "id": "BIT-01026015-0094",
+    "predioId": "0078000101026015",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2016-01-13T09:10:00",
+    "detalle": "Ejercicio 2016 — CCO 0078000101026015"
+  },
+  {
+    "id": "BIT-01026015-0095",
+    "predioId": "0078000101026015",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2016-01-21T10:35:00",
+    "detalle": "Acceso registrado — CCO 0078000101026015"
+  },
+  {
+    "id": "BIT-01082001-0096",
+    "predioId": "0078000101082001",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2014-04-04T15:44:00",
+    "detalle": "Alta inicial — CCO 0078000101082001 — EXENTO CERRILLO"
+  },
+  {
+    "id": "BIT-01082001-0097",
+    "predioId": "0078000101082001",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2014-10-01T12:02:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101082001"
+  },
+  {
+    "id": "BIT-01082001-0098",
+    "predioId": "0078000101082001",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2014-11-14T12:45:00",
+    "detalle": "Constancia emitida — CCO 0078000101082001 — EXENTO CERRILLO"
+  },
+  {
+    "id": "BIT-01082001-0099",
+    "predioId": "0078000101082001",
+    "evento": "Resolucion de exencion predial emitida",
+    "usuario": "director-catastro",
+    "fechaHora": "2015-01-01T15:04:00",
+    "detalle": "Predio declarado exento — CCO 0078000101082001"
+  },
+  {
+    "id": "BIT-01082001-0100",
+    "predioId": "0078000101082001",
+    "evento": "Registro de exencion en padron",
+    "usuario": "sistema",
+    "fechaHora": "2015-01-06T11:59:00",
+    "detalle": "Actualizacion de estatus — CCO 0078000101082001"
+  },
+  {
+    "id": "BIT-01082001-0101",
+    "predioId": "0078000101082001",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2016-01-01T17:42:00",
+    "detalle": "Ejercicio 2016 — CCO 0078000101082001"
+  },
+  {
+    "id": "BIT-01082001-0102",
+    "predioId": "0078000101082001",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2016-01-27T11:27:00",
+    "detalle": "Acceso registrado — CCO 0078000101082001"
+  },
+  {
+    "id": "BIT-01097039-0103",
+    "predioId": "0078000101097039",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2014-06-02T12:52:00",
+    "detalle": "Alta inicial — CCO 0078000101097039 — MARIA ELENA GUTIERREZ"
+  },
+  {
+    "id": "BIT-01097039-0104",
+    "predioId": "0078000101097039",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2014-09-06T09:03:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101097039"
+  },
+  {
+    "id": "BIT-01097039-0105",
+    "predioId": "0078000101097039",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2014-10-16T12:38:00",
+    "detalle": "Constancia emitida — CCO 0078000101097039 — MARIA ELENA GUTIERREZ"
+  },
+  {
+    "id": "BIT-01097039-0106",
+    "predioId": "0078000101097039",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2014-12-12T17:58:00",
+    "detalle": "Adeudo total: $5,827 MXN — 5 bimestres desde 2022"
+  },
+  {
+    "id": "BIT-01097039-0107",
+    "predioId": "0078000101097039",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2014-12-21T15:07:00",
+    "detalle": "CCO 0078000101097039 — Propietario: MARIA ELENA GUTIERREZ"
+  },
+  {
+    "id": "BIT-01097039-0108",
+    "predioId": "0078000101097039",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2015-01-09T12:44:00",
+    "detalle": "Ref. generada por $5,827 MXN"
+  },
+  {
+    "id": "BIT-01097039-0109",
+    "predioId": "0078000101097039",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2015-12-13T15:28:00",
+    "detalle": "Ejercicio 2015 — CCO 0078000101097039"
+  },
+  {
+    "id": "BIT-01097039-0110",
+    "predioId": "0078000101097039",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2015-12-16T17:02:00",
+    "detalle": "Acceso registrado — CCO 0078000101097039"
+  },
+  {
+    "id": "BIT-01120040-0111",
+    "predioId": "0078000101120040",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2017-09-01T12:01:00",
+    "detalle": "Alta inicial — CCO 0078000101120040 — ROBERTO CHAN GOMEZ"
+  },
+  {
+    "id": "BIT-01120040-0112",
+    "predioId": "0078000101120040",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2017-11-23T11:43:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101120040"
+  },
+  {
+    "id": "BIT-01120040-0113",
+    "predioId": "0078000101120040",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2018-02-14T17:37:00",
+    "detalle": "Constancia emitida — CCO 0078000101120040 — ROBERTO CHAN GOMEZ"
+  },
+  {
+    "id": "BIT-01120040-0114",
+    "predioId": "0078000101120040",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2018-02-25T12:36:00",
+    "detalle": "Adeudo total: $1,240,411 MXN — 5 bimestres desde 2022"
+  },
+  {
+    "id": "BIT-01120040-0115",
+    "predioId": "0078000101120040",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2018-03-02T10:30:00",
+    "detalle": "CCO 0078000101120040 — Propietario: ROBERTO CHAN GOMEZ"
+  },
+  {
+    "id": "BIT-01120040-0116",
+    "predioId": "0078000101120040",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2018-03-23T15:58:00",
+    "detalle": "Ref. generada por $1,240,411 MXN"
+  },
+  {
+    "id": "BIT-01120040-0117",
+    "predioId": "0078000101120040",
+    "evento": "Documento enviado a firma electronica (Cincel)",
+    "usuario": "operador-catastro",
+    "fechaHora": "2018-04-29T15:05:00",
+    "detalle": "CCO 0078000101120040 — Pendiente de firma del propietario"
+  },
+  {
+    "id": "BIT-01120040-0118",
+    "predioId": "0078000101120040",
+    "evento": "Firma electronica NOM-151 completada",
+    "usuario": "sistema",
+    "fechaHora": "2018-05-03T13:26:00",
+    "detalle": "Documento firmado — CCO 0078000101120040"
+  },
+  {
+    "id": "BIT-01120040-0119",
+    "predioId": "0078000101120040",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2019-02-12T13:42:00",
+    "detalle": "Ejercicio 2019 — CCO 0078000101120040"
+  },
+  {
+    "id": "BIT-01120040-0120",
+    "predioId": "0078000101120040",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2019-02-16T10:21:00",
+    "detalle": "Acceso registrado — CCO 0078000101120040"
+  },
+  {
+    "id": "BIT-01199005-0121",
+    "predioId": "0078000101199005",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2017-07-24T14:52:00",
+    "detalle": "Alta inicial — CCO 0078000101199005 — JOSE LUIS HERNANDEZ"
+  },
+  {
+    "id": "BIT-01199005-0122",
+    "predioId": "0078000101199005",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2018-02-09T08:29:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101199005"
+  },
+  {
+    "id": "BIT-01199005-0123",
+    "predioId": "0078000101199005",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2018-03-16T13:16:00",
+    "detalle": "Constancia emitida — CCO 0078000101199005 — JOSE LUIS HERNANDEZ"
+  },
+  {
+    "id": "BIT-01199005-0124",
+    "predioId": "0078000101199005",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2018-04-15T09:49:00",
+    "detalle": "Adeudo total: $16,484 MXN — 4 bimestres desde 2023"
+  },
+  {
+    "id": "BIT-01199005-0125",
+    "predioId": "0078000101199005",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2018-04-26T16:52:00",
+    "detalle": "CCO 0078000101199005 — Propietario: JOSE LUIS HERNANDEZ"
+  },
+  {
+    "id": "BIT-01199005-0126",
+    "predioId": "0078000101199005",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2018-05-01T16:29:00",
+    "detalle": "Ref. generada por $16,484 MXN"
+  },
+  {
+    "id": "BIT-01199005-0127",
+    "predioId": "0078000101199005",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2019-02-17T17:48:00",
+    "detalle": "Ejercicio 2019 — CCO 0078000101199005"
+  },
+  {
+    "id": "BIT-01199005-0128",
+    "predioId": "0078000101199005",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2019-03-05T15:48:00",
+    "detalle": "Acceso registrado — CCO 0078000101199005"
+  },
+  {
+    "id": "BIT-01248009-0129",
+    "predioId": "0078000101248009",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2014-04-26T10:59:00",
+    "detalle": "Alta inicial — CCO 0078000101248009 — CARMEN LOPEZ RUIZ"
+  },
+  {
+    "id": "BIT-01248009-0130",
+    "predioId": "0078000101248009",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2014-09-06T15:56:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101248009"
+  },
+  {
+    "id": "BIT-01248009-0131",
+    "predioId": "0078000101248009",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2014-11-19T15:07:00",
+    "detalle": "Constancia emitida — CCO 0078000101248009 — CARMEN LOPEZ RUIZ"
+  },
+  {
+    "id": "BIT-01248009-0132",
+    "predioId": "0078000101248009",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2014-11-30T17:51:00",
+    "detalle": "Adeudo total: $11,303 MXN — 5 bimestres desde 2022"
+  },
+  {
+    "id": "BIT-01248009-0133",
+    "predioId": "0078000101248009",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2014-12-08T10:19:00",
+    "detalle": "CCO 0078000101248009 — Propietario: CARMEN LOPEZ RUIZ"
+  },
+  {
+    "id": "BIT-01248009-0134",
+    "predioId": "0078000101248009",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2014-12-30T08:35:00",
+    "detalle": "Ref. generada por $11,303 MXN"
+  },
+  {
+    "id": "BIT-01248009-0135",
+    "predioId": "0078000101248009",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2015-08-16T15:07:00",
+    "detalle": "Ejercicio 2015 — CCO 0078000101248009"
+  },
+  {
+    "id": "BIT-01248009-0136",
+    "predioId": "0078000101248009",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2015-09-06T10:31:00",
+    "detalle": "Acceso registrado — CCO 0078000101248009"
+  },
+  {
+    "id": "BIT-01394010-0137",
+    "predioId": "0078000101394010",
+    "evento": "Alta de predio en padron catastral",
+    "usuario": "sistema",
+    "fechaHora": "2016-06-25T14:53:00",
+    "detalle": "Alta inicial — CCO 0078000101394010 — PEDRO MORALES JIMENEZ"
+  },
+  {
+    "id": "BIT-01394010-0138",
+    "predioId": "0078000101394010",
+    "evento": "Valuacion catastral asignada",
+    "usuario": "valuador",
+    "fechaHora": "2016-12-25T15:15:00",
+    "detalle": "Valor catastral determinado — CCO 0078000101394010"
+  },
+  {
+    "id": "BIT-01394010-0139",
+    "predioId": "0078000101394010",
+    "evento": "Emision de constancia catastral",
+    "usuario": "operador-catastro",
+    "fechaHora": "2017-02-22T16:09:00",
+    "detalle": "Constancia emitida — CCO 0078000101394010 — PEDRO MORALES JIMENEZ"
+  },
+  {
+    "id": "BIT-01394010-0140",
+    "predioId": "0078000101394010",
+    "evento": "Generacion de estado de cuenta predial",
+    "usuario": "caja",
+    "fechaHora": "2017-03-28T11:58:00",
+    "detalle": "Adeudo total: $16,836 MXN — 4 bimestres desde 2023"
+  },
+  {
+    "id": "BIT-01394010-0141",
+    "predioId": "0078000101394010",
+    "evento": "Notificacion de adeudo enviada al propietario",
+    "usuario": "caja",
+    "fechaHora": "2017-04-11T16:47:00",
+    "detalle": "CCO 0078000101394010 — Propietario: PEDRO MORALES JIMENEZ"
+  },
+  {
+    "id": "BIT-01394010-0142",
+    "predioId": "0078000101394010",
+    "evento": "Generacion de referencia de pago",
+    "usuario": "caja",
+    "fechaHora": "2017-04-20T09:17:00",
+    "detalle": "Ref. generada por $16,836 MXN"
+  },
+  {
+    "id": "BIT-01394010-0143",
+    "predioId": "0078000101394010",
+    "evento": "Ingreso de tramite - Traslado de Dominio",
+    "usuario": "ventanilla",
+    "fechaHora": "2018-02-16T13:59:00",
+    "detalle": "CCO 0078000101394010 — Nuevo propietario en proceso"
+  },
+  {
+    "id": "BIT-01394010-0144",
+    "predioId": "0078000101394010",
+    "evento": "Revision documental de escritura publica",
+    "usuario": "operador-catastro",
+    "fechaHora": "2018-02-23T08:18:00",
+    "detalle": "Verificacion — CCO 0078000101394010"
+  },
+  {
+    "id": "BIT-01394010-0145",
+    "predioId": "0078000101394010",
+    "evento": "Traslado de Dominio aprobado",
+    "usuario": "director-catastro",
+    "fechaHora": "2018-03-09T17:37:00",
+    "detalle": "CCO 0078000101394010 — Actualizado en padron"
+  },
+  {
+    "id": "BIT-01394010-0146",
+    "predioId": "0078000101394010",
+    "evento": "Documento enviado a firma electronica (Cincel)",
+    "usuario": "operador-catastro",
+    "fechaHora": "2018-04-19T10:28:00",
+    "detalle": "CCO 0078000101394010 — Pendiente de firma del propietario"
+  },
+  {
+    "id": "BIT-01394010-0147",
+    "predioId": "0078000101394010",
+    "evento": "Firma electronica NOM-151 completada",
+    "usuario": "sistema",
+    "fechaHora": "2018-04-24T15:22:00",
+    "detalle": "Documento firmado — CCO 0078000101394010"
+  },
+  {
+    "id": "BIT-01394010-0148",
+    "predioId": "0078000101394010",
+    "evento": "Actualizacion masiva de valores catastrales",
+    "usuario": "valuador",
+    "fechaHora": "2019-02-03T16:48:00",
+    "detalle": "Ejercicio 2019 — CCO 0078000101394010"
+  },
+  {
+    "id": "BIT-01394010-0149",
+    "predioId": "0078000101394010",
+    "evento": "Consulta de ficha catastral",
+    "usuario": "sistema",
+    "fechaHora": "2019-02-21T14:29:00",
+    "detalle": "Acceso registrado — CCO 0078000101394010"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "disclaimer": "Fuentes sugeridas para contexto demo. Los datos catastrales del MVP son ficticios/anonymizados hasta recibir acceso de Oscar.",
+  "sources": [
+    {
+      "name": "OpenStreetMap / Geofabrik Mexico",
+      "url": "https://download.geofabrik.de/north-america/mexico.html",
+      "use": "Mapa base, calles, edificios y contexto urbano.",
+      "caution": "Edificios OSM no son predios legales."
+    },
+    {
+      "name": "Overpass Turbo",
+      "url": "https://overpass-turbo.eu/",
+      "use": "Exportar edificios OSM por zona a GeoJSON para demo.",
+      "caution": "Validar cobertura por zona; usar solo como placeholder."
+    },
+    {
+      "name": "INEGI Marco Geoestadistico",
+      "url": "https://www.inegi.org.mx/temas/mg/",
+      "use": "Limites territoriales oficiales y contexto municipal.",
+      "caution": "No sustituye capas catastrales municipales."
+    },
+    {
+      "name": "INEGI Descarga Masiva",
+      "url": "https://www.inegi.org.mx/app/descarga/",
+      "use": "Contexto urbano, economico y estadistico para dashboard.",
+      "caution": "Evitar mezclarlo como dato predial real."
+    }
+  ],
+  "overpassQueryExample": "[out:json][timeout:25];\narea[\"name\"=\"Puebla\"][\"boundary\"=\"administrative\"]->.searchArea;\n(way[\"building\"](area.searchArea); relation[\"building\"](area.searchArea););\nout body; >; out skel qt;"
+}

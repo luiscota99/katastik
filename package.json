@@ -1,0 +1,19 @@
+{
+  "name": "katastik",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Katastik - Plataforma Digital de Gestion Catastral Municipal",
+  "scripts": {
+    "dev": "concurrently --names API,WEB --prefix-colors cyan,green \"npm run dev --workspace=apps/api\" \"npm run dev --workspace=apps/web\"",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "install:all": "npm install && npm install --workspace=apps/api && npm install --workspace=apps/web"
+  },
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

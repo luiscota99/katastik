@@ -1,0 +1,980 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0001",
+        "claveCatastral": "21-114-DEMO-00001",
+        "colonia": "Centro Historico",
+        "usoSuelo": "Habitacional mixto",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2063,
+              19.0414
+            ],
+            [
+              -98.20588,
+              19.0414
+            ],
+            [
+              -98.20588,
+              19.04172
+            ],
+            [
+              -98.2063,
+              19.04172
+            ],
+            [
+              -98.2063,
+              19.0414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0002",
+        "claveCatastral": "21-114-DEMO-00002",
+        "colonia": "Santiago",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2051,
+              19.0414
+            ],
+            [
+              -98.20468,
+              19.0414
+            ],
+            [
+              -98.20468,
+              19.04172
+            ],
+            [
+              -98.2051,
+              19.04172
+            ],
+            [
+              -98.2051,
+              19.0414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0003",
+        "claveCatastral": "21-114-DEMO-00003",
+        "colonia": "La Paz",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Poniente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2039,
+              19.0414
+            ],
+            [
+              -98.20348,
+              19.0414
+            ],
+            [
+              -98.20348,
+              19.04172
+            ],
+            [
+              -98.2039,
+              19.04172
+            ],
+            [
+              -98.2039,
+              19.0414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0004",
+        "claveCatastral": "21-114-DEMO-00004",
+        "colonia": "Angelopolis",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Sur",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2027,
+              19.0414
+            ],
+            [
+              -98.20228,
+              19.0414
+            ],
+            [
+              -98.20228,
+              19.04172
+            ],
+            [
+              -98.2027,
+              19.04172
+            ],
+            [
+              -98.2027,
+              19.0414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0005",
+        "claveCatastral": "21-114-DEMO-00005",
+        "colonia": "San Manuel",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Oriente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2015,
+              19.0414
+            ],
+            [
+              -98.20108,
+              19.0414
+            ],
+            [
+              -98.20108,
+              19.04172
+            ],
+            [
+              -98.2015,
+              19.04172
+            ],
+            [
+              -98.2015,
+              19.0414
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0006",
+        "claveCatastral": "21-114-DEMO-00006",
+        "colonia": "Centro Historico",
+        "usoSuelo": "Habitacional mixto",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2063,
+              19.04225
+            ],
+            [
+              -98.20588,
+              19.04225
+            ],
+            [
+              -98.20588,
+              19.04257
+            ],
+            [
+              -98.2063,
+              19.04257
+            ],
+            [
+              -98.2063,
+              19.04225
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0007",
+        "claveCatastral": "21-114-DEMO-00007",
+        "colonia": "Santiago",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2051,
+              19.04225
+            ],
+            [
+              -98.20468,
+              19.04225
+            ],
+            [
+              -98.20468,
+              19.04257
+            ],
+            [
+              -98.2051,
+              19.04257
+            ],
+            [
+              -98.2051,
+              19.04225
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0008",
+        "claveCatastral": "21-114-DEMO-00008",
+        "colonia": "La Paz",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Poniente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2039,
+              19.04225
+            ],
+            [
+              -98.20348,
+              19.04225
+            ],
+            [
+              -98.20348,
+              19.04257
+            ],
+            [
+              -98.2039,
+              19.04257
+            ],
+            [
+              -98.2039,
+              19.04225
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0009",
+        "claveCatastral": "21-114-DEMO-00009",
+        "colonia": "Angelopolis",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Sur",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2027,
+              19.04225
+            ],
+            [
+              -98.20228,
+              19.04225
+            ],
+            [
+              -98.20228,
+              19.04257
+            ],
+            [
+              -98.2027,
+              19.04257
+            ],
+            [
+              -98.2027,
+              19.04225
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0010",
+        "claveCatastral": "21-114-DEMO-00010",
+        "colonia": "San Manuel",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Oriente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2015,
+              19.04225
+            ],
+            [
+              -98.20108,
+              19.04225
+            ],
+            [
+              -98.20108,
+              19.04257
+            ],
+            [
+              -98.2015,
+              19.04257
+            ],
+            [
+              -98.2015,
+              19.04225
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0011",
+        "claveCatastral": "21-114-DEMO-00011",
+        "colonia": "Centro Historico",
+        "usoSuelo": "Habitacional mixto",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2063,
+              19.0431
+            ],
+            [
+              -98.20588,
+              19.0431
+            ],
+            [
+              -98.20588,
+              19.04342
+            ],
+            [
+              -98.2063,
+              19.04342
+            ],
+            [
+              -98.2063,
+              19.0431
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0012",
+        "claveCatastral": "21-114-DEMO-00012",
+        "colonia": "Santiago",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2051,
+              19.0431
+            ],
+            [
+              -98.20468,
+              19.0431
+            ],
+            [
+              -98.20468,
+              19.04342
+            ],
+            [
+              -98.2051,
+              19.04342
+            ],
+            [
+              -98.2051,
+              19.0431
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0013",
+        "claveCatastral": "21-114-DEMO-00013",
+        "colonia": "La Paz",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Poniente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2039,
+              19.0431
+            ],
+            [
+              -98.20348,
+              19.0431
+            ],
+            [
+              -98.20348,
+              19.04342
+            ],
+            [
+              -98.2039,
+              19.04342
+            ],
+            [
+              -98.2039,
+              19.0431
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0014",
+        "claveCatastral": "21-114-DEMO-00014",
+        "colonia": "Angelopolis",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Sur",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2027,
+              19.0431
+            ],
+            [
+              -98.20228,
+              19.0431
+            ],
+            [
+              -98.20228,
+              19.04342
+            ],
+            [
+              -98.2027,
+              19.04342
+            ],
+            [
+              -98.2027,
+              19.0431
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0015",
+        "claveCatastral": "21-114-DEMO-00015",
+        "colonia": "San Manuel",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Oriente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2015,
+              19.0431
+            ],
+            [
+              -98.20108,
+              19.0431
+            ],
+            [
+              -98.20108,
+              19.04342
+            ],
+            [
+              -98.2015,
+              19.04342
+            ],
+            [
+              -98.2015,
+              19.0431
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0016",
+        "claveCatastral": "21-114-DEMO-00016",
+        "colonia": "Centro Historico",
+        "usoSuelo": "Habitacional mixto",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2063,
+              19.04395
+            ],
+            [
+              -98.20588,
+              19.04395
+            ],
+            [
+              -98.20588,
+              19.04427
+            ],
+            [
+              -98.2063,
+              19.04427
+            ],
+            [
+              -98.2063,
+              19.04395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0017",
+        "claveCatastral": "21-114-DEMO-00017",
+        "colonia": "Santiago",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2051,
+              19.04395
+            ],
+            [
+              -98.20468,
+              19.04395
+            ],
+            [
+              -98.20468,
+              19.04427
+            ],
+            [
+              -98.2051,
+              19.04427
+            ],
+            [
+              -98.2051,
+              19.04395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0018",
+        "claveCatastral": "21-114-DEMO-00018",
+        "colonia": "La Paz",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Poniente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2039,
+              19.04395
+            ],
+            [
+              -98.20348,
+              19.04395
+            ],
+            [
+              -98.20348,
+              19.04427
+            ],
+            [
+              -98.2039,
+              19.04427
+            ],
+            [
+              -98.2039,
+              19.04395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0019",
+        "claveCatastral": "21-114-DEMO-00019",
+        "colonia": "Angelopolis",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Sur",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2027,
+              19.04395
+            ],
+            [
+              -98.20228,
+              19.04395
+            ],
+            [
+              -98.20228,
+              19.04427
+            ],
+            [
+              -98.2027,
+              19.04427
+            ],
+            [
+              -98.2027,
+              19.04395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0020",
+        "claveCatastral": "21-114-DEMO-00020",
+        "colonia": "San Manuel",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Oriente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2015,
+              19.04395
+            ],
+            [
+              -98.20108,
+              19.04395
+            ],
+            [
+              -98.20108,
+              19.04427
+            ],
+            [
+              -98.2015,
+              19.04427
+            ],
+            [
+              -98.2015,
+              19.04395
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0021",
+        "claveCatastral": "21-114-DEMO-00021",
+        "colonia": "Centro Historico",
+        "usoSuelo": "Habitacional mixto",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2063,
+              19.0448
+            ],
+            [
+              -98.20588,
+              19.0448
+            ],
+            [
+              -98.20588,
+              19.04512
+            ],
+            [
+              -98.2063,
+              19.04512
+            ],
+            [
+              -98.2063,
+              19.0448
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0022",
+        "claveCatastral": "21-114-DEMO-00022",
+        "colonia": "Santiago",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Centro",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2051,
+              19.0448
+            ],
+            [
+              -98.20468,
+              19.0448
+            ],
+            [
+              -98.20468,
+              19.04512
+            ],
+            [
+              -98.2051,
+              19.04512
+            ],
+            [
+              -98.2051,
+              19.0448
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0023",
+        "claveCatastral": "21-114-DEMO-00023",
+        "colonia": "La Paz",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Poniente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2039,
+              19.0448
+            ],
+            [
+              -98.20348,
+              19.0448
+            ],
+            [
+              -98.20348,
+              19.04512
+            ],
+            [
+              -98.2039,
+              19.04512
+            ],
+            [
+              -98.2039,
+              19.0448
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0024",
+        "claveCatastral": "21-114-DEMO-00024",
+        "colonia": "Angelopolis",
+        "usoSuelo": "Comercial",
+        "zonaValor": "Sur",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2027,
+              19.0448
+            ],
+            [
+              -98.20228,
+              19.0448
+            ],
+            [
+              -98.20228,
+              19.04512
+            ],
+            [
+              -98.2027,
+              19.04512
+            ],
+            [
+              -98.2027,
+              19.0448
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "PUE-DEMO-0025",
+        "claveCatastral": "21-114-DEMO-00025",
+        "colonia": "San Manuel",
+        "usoSuelo": "Habitacional",
+        "zonaValor": "Oriente",
+        "source": "geometria_demo_inspirada_en_contexto_osm",
+        "disclaimer": "Poligono ficticio para demo, no es predio legal."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -98.2015,
+              19.0448
+            ],
+            [
+              -98.20108,
+              19.0448
+            ],
+            [
+              -98.20108,
+              19.04512
+            ],
+            [
+              -98.2015,
+              19.04512
+            ],
+            [
+              -98.2015,
+              19.0448
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
