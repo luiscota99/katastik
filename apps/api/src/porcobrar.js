@@ -89,8 +89,10 @@ async function findCustomerByRfc(rfc) {
       if (!list.length) break;
       const found = list.find(c => c.tax_profile === rfc);
       if (found?.uuid) return found.uuid;
-      // Si la respuesta tiene menos de 100, ya llegamos al final
-      if (list.length < 100) break;
+      // Usar el total de páginas que devuelve la API (no el tamaño del array,
+      // ya que PorCobrar puede devolver menos de `limit` aun habiendo más páginas)
+      const totalPages = resp?.pages ?? 1;
+      if (page >= totalPages) break;
       page++;
       if (page > 20) break; // safety cap
     }
