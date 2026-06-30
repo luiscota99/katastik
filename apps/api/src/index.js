@@ -721,13 +721,21 @@ app.post('/api/charges/:id/cobro', async (req, res) => {
     }
     const predioId = charge.predioId || derivePredioId(chargeId);
 
-    // Si ya hay un cobro vigente para este cargo, reutilizarlo (idempotencia básica)
+    // Reutilizar cobro vigente (idempotencia), con estas excepciones para el demo:
+    // 1) Email diferente al del cobro existente → recrear NV para que llegue el correo
+    // 2) Cobro ya pagado → permitir generar uno nuevo (demo: mismo cargo se puede pagar N veces)
     const existing = cobroMap.get(chargeId);
-    if (existing && existing.estado !== 'pagado' && existing.paymentLink) {
-      return res.json({
-        chargeId, estadoPago: 'cobro_generado',
-        paymentLink: existing.paymentLink, nvUuid: existing.nvUuid, ordenUuid: existing.ordenUuid,
-      });
+    if (existing && existing.paymentLink) {
+      const emailCambiado = email && email !== existing.email;
+      const yaPagado = existing.estado === 'pagado';
+      if (!emailCambiado && !yaPagado) {
+        return res.json({
+          chargeId, estadoPago: 'cobro_generado',
+          paymentLink: existing.paymentLink, nvUuid: existing.nvUuid, ordenUuid: existing.ordenUuid,
+        });
+      }
+      // Eliminar caché para forzar nueva NV
+      cobroMap.delete(chargeId);
     }
 
     // 1) Orden de pago en Catastro (SIMULADA)
@@ -763,6 +771,7 @@ app.post('/api/charges/:id/cobro', async (req, res) => {
     cobroMap.set(chargeId, {
       nvUuid, ordenUuid: orden.ordenUuid, customerUuid, predioId,
       paymentLink, total, estado: 'cobro_generado', folioOperacion: null, fechaPago: null,
+      email: email || null,
     });
 
     addBitacoraEvent(

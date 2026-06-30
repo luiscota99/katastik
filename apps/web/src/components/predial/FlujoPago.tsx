@@ -6,12 +6,12 @@ import type { Adeudo, Predio } from '@/types/catastro';
 import {
   X, CreditCard, CheckCircle2, Loader2, Receipt,
   Building2, Banknote, ExternalLink, Copy, Check, Clock,
-  ShieldCheck, LayoutPanelLeft, QrCode, AlertTriangle,
+  ShieldCheck, QrCode,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type Fase = 'inicio' | 'esperando' | 'pagado';
-type Vista = 'iframe' | 'qr';
+type Vista = 'qr';
 
 interface Props {
   charge: Adeudo;
@@ -32,8 +32,9 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
     : 'inicio';
 
   const [fase, setFase] = useState<Fase>(faseInicial);
-  const [vista, setVista] = useState<Vista>('iframe');
-  const [iframeBlocked, setIframeBlocked] = useState(false);
+  // PorCobrar bloquea iframes con X-Frame-Options: sameorigin — ir directo a vista QR/link
+  const [vista, setVista] = useState<Vista>('qr');
+  const [iframeBlocked, setIframeBlocked] = useState(true);
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -41,7 +42,6 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
   const [folio, setFolio] = useState<string | null>(charge.folioPago ?? null);
   const [copied, setCopied] = useState(false);
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const iframeRef = useRef<HTMLIFrameElement | null>(null);
 
   const ext = charge as AdeudoExt;
   const periodoLabel = ext.anio && ext.bimestre
@@ -54,11 +54,10 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
 
   useEffect(() => () => stopPolling(), []);
 
-  // Poll más frecuente cuando está en fase esperando (2s con iframe, 4s sin él)
   useEffect(() => {
     if (fase !== 'esperando') return;
     stopPolling();
-    const interval = vista === 'iframe' && !iframeBlocked ? 2000 : 4000;
+    const interval = 4000;
     pollRef.current = setInterval(async () => {
       try {
         const st = await getCobroStatus(charge.id);
@@ -73,27 +72,7 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
     return () => stopPolling();
   }, [fase, vista, iframeBlocked, charge.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Detectar si el iframe fue bloqueado por X-Frame-Options
-  // No hay forma confiable de detectarlo directamente; usamos un timeout:
-  // si en 4s el iframe no disparó onLoad, asumimos que fue bloqueado.
-  const iframeLoadTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const handleIframeLoad = () => {
-    if (iframeLoadTimeoutRef.current) clearTimeout(iframeLoadTimeoutRef.current);
-    // Si cargó correctamente el iframe no está bloqueado
-    setIframeBlocked(false);
-  };
-
-  useEffect(() => {
-    if (fase !== 'esperando' || vista !== 'iframe' || !paymentLink) return;
-    // Inicia timeout — si el iframe no carga en 5s, mostramos aviso y cambiamos a QR
-    iframeLoadTimeoutRef.current = setTimeout(() => {
-      setIframeBlocked(true);
-      setVista('qr');
-    }, 5000);
-    return () => {
-      if (iframeLoadTimeoutRef.current) clearTimeout(iframeLoadTimeoutRef.current);
-    };
-  }, [fase, vista, paymentLink]);
+  // PorCobrar bloquea iframes — no intentamos cargar el iframe, vamos directo a QR/link.
 
   const handleCrearCobro = async () => {
     setLoading(true);
@@ -102,7 +81,7 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
       const resp = await createCobro(charge, email.trim() || undefined);
       setPaymentLink(resp.paymentLink);
       setFase('esperando');
-      setVista('iframe');
+      setVista('qr');
     } catch (e) {
       setError(e instanceof Error ? e.message : 'No se pudo generar el cobro en PorCobrar');
     } finally {
@@ -132,9 +111,7 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
     } catch { /* clipboard no disponible */ }
   };
 
-  // Tamaño del modal — más grande cuando mostramos iframe
-  const showIframe = fase === 'esperando' && vista === 'iframe' && paymentLink && !iframeBlocked;
-  const modalMaxW = showIframe ? 'max-w-2xl' : 'max-w-lg';
+  const modalMaxW = 'max-w-lg';
 
   return (
     <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
@@ -150,19 +127,13 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
             </div>
           </div>
           <div className="flex items-center gap-2">
-            {fase === 'esperando' && paymentLink && !iframeBlocked && (
+            {fase === 'esperando' && paymentLink && (
               <div className="flex rounded-lg border border-white/20 overflow-hidden">
                 <button
-                  onClick={() => setVista('iframe')}
-                  className={`px-2 py-1 text-xs flex items-center gap-1 transition-colors ${vista === 'iframe' ? 'bg-white/20' : 'hover:bg-white/10'}`}
-                >
-                  <LayoutPanelLeft className="w-3 h-3" /> Checkout
-                </button>
-                <button
                   onClick={() => setVista('qr')}
-                  className={`px-2 py-1 text-xs flex items-center gap-1 transition-colors ${vista === 'qr' ? 'bg-white/20' : 'hover:bg-white/10'}`}
+                  className="px-2 py-1 text-xs flex items-center gap-1 bg-white/20"
                 >
-                  <QrCode className="w-3 h-3" /> QR
+                  <QrCode className="w-3 h-3" /> QR / Link
                 </button>
               </div>
             )}
@@ -188,7 +159,7 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
         </div>
 
         {/* Cuerpo */}
-        <div className={`px-6 py-5 ${showIframe ? 'p-0' : ''}`}>
+        <div className="px-6 py-5">
 
           {/* ── Inicio ── */}
           {fase === 'inicio' && (
@@ -207,57 +178,16 @@ export function FlujoPago({ charge, predio, onClose, onComplete, onRecibo }: Pro
                   className="mt-1 w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#1B3A5C]/30"
                 />
                 <p className="text-[11px] text-gray-400 mt-1">
-                  Si lo capturas, PorCobrar envía el enlace por correo. El checkout se abrirá aquí mismo.
+                  Si lo capturas, PorCobrar envía el enlace por correo.
                 </p>
               </div>
               {error && <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-700">{error}</div>}
             </div>
           )}
 
-          {/* ── Esperando — vista iframe ── */}
-          {fase === 'esperando' && vista === 'iframe' && paymentLink && !iframeBlocked && (
-            <div className="flex flex-col">
-              {/* Status bar */}
-              <div className="px-4 py-2 bg-amber-50 border-b border-amber-100 flex items-center gap-2 text-xs text-amber-700">
-                <Clock className="w-3.5 h-3.5 flex-shrink-0" />
-                Esperando pago — verificando automáticamente cada 2s
-                <Loader2 className="w-3 h-3 animate-spin ml-auto" />
-              </div>
-              {/* Iframe checkout */}
-              <iframe
-                ref={iframeRef}
-                src={paymentLink}
-                onLoad={handleIframeLoad}
-                className="w-full border-0"
-                style={{ height: '520px', minHeight: '400px' }}
-                allow="payment"
-                title="Checkout PorCobrar"
-                sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-top-navigation"
-              />
-              {/* Test card hint */}
-              <div className="px-4 py-2 bg-blue-50 border-t border-blue-100 flex items-center justify-between gap-4">
-                <div className="text-[11px] text-blue-700">
-                  <span className="font-semibold">Tarjeta de prueba:</span>{' '}
-                  <span className="font-mono">{TEST_CARD}</span>
-                  <span className="text-blue-400"> · fecha futura · CVC cualquiera</span>
-                </div>
-                <Button size="sm" variant="outline" className="flex-shrink-0 h-7 text-xs gap-1" onClick={handleCheckStatus}>
-                  <Loader2 className="w-3 h-3" /> Verificar
-                </Button>
-              </div>
-            </div>
-          )}
-
-          {/* ── Esperando — iframe bloqueado o vista QR ── */}
-          {fase === 'esperando' && (vista === 'qr' || iframeBlocked) && (
+          {/* ── Esperando — vista QR/link ── */}
+          {fase === 'esperando' && (
             <div className="space-y-4">
-              {iframeBlocked && (
-                <div className="flex items-start gap-2 p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-700">
-                  <AlertTriangle className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
-                  PorCobrar no permite incrustar el checkout en un iframe. Abre el enlace en una nueva pestaña o escanea el QR.
-                </div>
-              )}
-
               <div className="flex items-center gap-2 text-sm text-blue-700">
                 <Clock className="w-4 h-4" />
                 Esperando pago del contribuyente…
