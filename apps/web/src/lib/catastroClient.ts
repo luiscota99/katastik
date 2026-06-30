@@ -21,11 +21,13 @@ import type {
 } from '@/types/catastro';
 
 const MODE = (import.meta.env.VITE_CATASTRO_MODE as string) || 'api';
-// VITE_API_URL: URL base del backend.
-//   dev (Vite proxy):   '' → '/api' usa el proxy local
-//   docker-compose:     '' → nginx proxy interno (api:8000)
-//   cloud separado:     'https://katastik-back.tu-dominio.com' → llamada directa
-const _apiUrl = (import.meta.env.VITE_API_URL as string | undefined) ?? '';
+// API URL resolution — works for both build-time and runtime injection:
+//   1. Build-time (Vite):  VITE_API_URL env var baked in during `vite build`
+//   2. Runtime (EasyPanel/Render): entrypoint patches __VITE_API_URL_PLACEHOLDER__
+//      in the built JS bundle before nginx starts
+const _buildTimeUrl = (import.meta.env.VITE_API_URL as string | undefined) ?? '';
+const _runtimeUrl = '__VITE_API_URL_PLACEHOLDER__';
+const _apiUrl = _buildTimeUrl || (_runtimeUrl.startsWith('http') ? _runtimeUrl : '');
 const API_BASE = _apiUrl ? `${_apiUrl.replace(/\/$/, '')}/api` : '/api';
 
 // ── Helpers ──────────────────────────────────
