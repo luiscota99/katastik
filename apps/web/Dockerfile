@@ -11,10 +11,15 @@ RUN npm install --workspace=apps/web
 # Copiar fuentes y public
 COPY apps/web ./apps/web
 
-# Build (VITE_CATASTRO_MODE=api para producción; el proxy de runtime lo manejará nginx)
+# Build
 WORKDIR /app/apps/web
 ARG VITE_CATASTRO_MODE=api
 ENV VITE_CATASTRO_MODE=${VITE_CATASTRO_MODE}
+# VITE_API_URL: dejar vacío para usar el proxy nginx interno (docker-compose)
+# Setear a la URL pública del backend cuando los servicios están separados en la nube
+# Ej: --build-arg VITE_API_URL=https://katastik-back.tu-dominio.com
+ARG VITE_API_URL=
+ENV VITE_API_URL=${VITE_API_URL}
 RUN npx vite build
 
 # Stage 2: serve con nginx

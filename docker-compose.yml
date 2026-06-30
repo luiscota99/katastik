@@ -45,6 +45,10 @@ services:
       dockerfile: apps/web/Dockerfile
       args:
         VITE_CATASTRO_MODE: api
+        # Dejar vacío para docker-compose (nginx proxy interno)
+        # Para cloud con servicios separados, setear la URL pública del backend:
+        # VITE_API_URL: "https://katastik-back.tu-dominio.com"
+        VITE_API_URL: ""
     container_name: katastik-web
     environment:
       # Si el backend está en otro host (ej. plataforma cloud), cambia esto:

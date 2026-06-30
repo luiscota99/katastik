@@ -21,7 +21,12 @@ import type {
 } from '@/types/catastro';
 
 const MODE = (import.meta.env.VITE_CATASTRO_MODE as string) || 'api';
-const API_BASE = '/api'; // Proxy Vite → localhost:8000
+// VITE_API_URL: URL base del backend.
+//   dev (Vite proxy):   '' → '/api' usa el proxy local
+//   docker-compose:     '' → nginx proxy interno (api:8000)
+//   cloud separado:     'https://katastik-back.tu-dominio.com' → llamada directa
+const _apiUrl = (import.meta.env.VITE_API_URL as string | undefined) ?? '';
+const API_BASE = _apiUrl ? `${_apiUrl.replace(/\/$/, '')}/api` : '/api';
 
 // ── Helpers ──────────────────────────────────
 
