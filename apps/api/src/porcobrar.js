@@ -79,18 +79,22 @@ function ccoRfc(cco) {
   return `CAT010101${suffix}`;
 }
 
-/** Busca un customer por RFC (tax_profile) en la lista del team. */
+/** Busca un customer por RFC paginando hasta encontrarlo. */
 async function findCustomerByRfc(rfc) {
   try {
-    // Intenta búsqueda directa por identifier/rfc primero
-    const resp = await pcFetch(`/v1/customer?tax_profile=${encodeURIComponent(rfc)}`);
-    const list = resp?.data ?? (Array.isArray(resp) ? resp : []);
-    const found = list.find(c => c.tax_profile === rfc);
-    if (found?.uuid) return found.uuid;
-    // Fallback: lista completa (hasta 100)
-    const all = await pcFetch('/v1/customer?limit=100');
-    const allList = all?.data ?? (Array.isArray(all) ? all : []);
-    return allList.find(c => c.tax_profile === rfc)?.uuid ?? null;
+    let page = 1;
+    while (true) {
+      const resp = await pcFetch(`/v1/customer?limit=100&page=${page}`);
+      const list = resp?.data ?? (Array.isArray(resp) ? resp : []);
+      if (!list.length) break;
+      const found = list.find(c => c.tax_profile === rfc);
+      if (found?.uuid) return found.uuid;
+      // Si la respuesta tiene menos de 100, ya llegamos al final
+      if (list.length < 100) break;
+      page++;
+      if (page > 20) break; // safety cap
+    }
+    return null;
   } catch {
     return null;
   }
