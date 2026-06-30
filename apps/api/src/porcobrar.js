@@ -82,10 +82,15 @@ function ccoRfc(cco) {
 /** Busca un customer por RFC (tax_profile) en la lista del team. */
 async function findCustomerByRfc(rfc) {
   try {
-    const resp = await pcFetch('/v1/customer');
-    const list = resp?.data ?? [];
+    // Intenta búsqueda directa por identifier/rfc primero
+    const resp = await pcFetch(`/v1/customer?tax_profile=${encodeURIComponent(rfc)}`);
+    const list = resp?.data ?? (Array.isArray(resp) ? resp : []);
     const found = list.find(c => c.tax_profile === rfc);
-    return found?.uuid ?? null;
+    if (found?.uuid) return found.uuid;
+    // Fallback: lista completa (hasta 100)
+    const all = await pcFetch('/v1/customer?limit=100');
+    const allList = all?.data ?? (Array.isArray(all) ? all : []);
+    return allList.find(c => c.tax_profile === rfc)?.uuid ?? null;
   } catch {
     return null;
   }
