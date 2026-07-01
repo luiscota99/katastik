@@ -94,15 +94,30 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
   // State specific to the firma step (waiting for user to sign in portal)
   const [waitingForSignature, setWaitingForSignature] = useState(false);
   const [pollCount, setPollCount] = useState(0);
+  const [iframeBlocked, setIframeBlocked] = useState(false);
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const iframeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const allDone = completedSteps >= ETAPAS.length;
   const nextStep = completedSteps < ETAPAS.length ? completedSteps : null;
+  const signingUrl = cincelData.signingUrl ?? null;
+  const showIframe = waitingForSignature && !!signingUrl && !iframeBlocked;
 
   const stopPolling = () => {
     if (pollRef.current) { clearInterval(pollRef.current); pollRef.current = null; }
   };
-  useEffect(() => () => stopPolling(), []);
+  useEffect(() => () => {
+    stopPolling();
+    if (iframeTimeoutRef.current) clearTimeout(iframeTimeoutRef.current);
+  }, []);
+
+  // Detectar si el iframe de Cincel se bloqueó (timeout 6s sin onLoad)
+  useEffect(() => {
+    if (!waitingForSignature || !signingUrl || iframeBlocked) return;
+    if (iframeTimeoutRef.current) clearTimeout(iframeTimeoutRef.current);
+    iframeTimeoutRef.current = setTimeout(() => setIframeBlocked(true), 6000);
+    return () => { if (iframeTimeoutRef.current) clearTimeout(iframeTimeoutRef.current); };
+  }, [waitingForSignature, signingUrl, iframeBlocked]);
 
   const getStepState = (idx: number): EtapaState => {
     if (idx < completedSteps) return 'done';
@@ -179,7 +194,7 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
+      <div className={`bg-white rounded-2xl shadow-2xl w-full overflow-hidden transition-all duration-300 ${showIframe ? 'max-w-4xl' : 'max-w-lg'}`}>
 
         {/* Header */}
         <div className="bg-[#1B3A5C] text-white px-6 py-4 flex items-center justify-between">
@@ -291,18 +306,48 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
                   </div>
                 )}
 
-                {/* Firma waiting: signing URL button */}
-                {isFiremaWaiting && cincelData.signingUrl && (
-                  <div className="mt-3 ml-11 flex flex-wrap gap-2">
-                    <a href={cincelData.signingUrl} target="_blank" rel="noreferrer">
-                      <Button size="sm" className="gap-1.5 bg-amber-600 hover:bg-amber-700 h-7 text-xs">
-                        <ExternalLink className="w-3 h-3" /> Abrir portal de firma Cincel
+                {/* Firma waiting: iframe o link/fallback */}
+                {isFiremaWaiting && signingUrl && (
+                  <div className="mt-3 ml-11 space-y-2">
+                    {showIframe ? (
+                      <div className="rounded-lg overflow-hidden border border-amber-200">
+                        <iframe
+                          src={signingUrl}
+                          className="w-full border-0"
+                          style={{ height: '480px' }}
+                          title="Portal de firma Cincel"
+                          onLoad={() => {
+                            if (iframeTimeoutRef.current) clearTimeout(iframeTimeoutRef.current);
+                          }}
+                          onError={() => setIframeBlocked(true)}
+                        />
+                      </div>
+                    ) : (
+                      <div className="flex flex-wrap gap-2">
+                        {iframeBlocked && (
+                          <p className="w-full text-[11px] text-amber-700">
+                            El portal no pudo cargarse aquí. Ábrelo en una nueva pestaña:
+                          </p>
+                        )}
+                        <a href={signingUrl} target="_blank" rel="noreferrer">
+                          <Button size="sm" className="gap-1.5 bg-amber-600 hover:bg-amber-700 h-7 text-xs">
+                            <ExternalLink className="w-3 h-3" /> Abrir portal Cincel
+                          </Button>
+                        </a>
+                      </div>
+                    )}
+                    <div className="flex gap-2">
+                      {showIframe && (
+                        <Button size="sm" variant="outline" className="gap-1.5 h-7 text-xs"
+                          onClick={() => setIframeBlocked(true)}>
+                          <ExternalLink className="w-3 h-3" /> Abrir en pestaña
+                        </Button>
+                      )}
+                      <Button size="sm" variant="outline" className="gap-1.5 h-7 text-xs"
+                        onClick={handleVerifySignature}>
+                        <RefreshCw className="w-3 h-3" /> Verificar firma
                       </Button>
-                    </a>
-                    <Button size="sm" variant="outline" className="gap-1.5 h-7 text-xs"
-                      onClick={handleVerifySignature}>
-                      <RefreshCw className="w-3 h-3" /> Verificar ahora
-                    </Button>
+                    </div>
                   </div>
                 )}
               </div>
