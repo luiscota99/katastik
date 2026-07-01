@@ -1,14 +1,15 @@
 /**
  * cincel.js — Cliente REAL hacia la API de Cincel v3 (app.cincel.digital).
  *
- * Flujo documentado (free plan):
+ * Flujo documentado:
  *  1. uploadDocument()    → POST /teams/:team/folders/:folder/documents  → uuid + "unsigned"
  *  2. getDocumentStatus() → GET  /teams/:team/folders/:folder/documents/:uuid → status "unsigned"|"signed"
  *     • Portal de firma:  https://app.cincel.digital/ (el firmante abre la app y firma)
  *  3. createTimestamp()   → GET  /teams/:team/folders/:folder/documents/:uuid/timestamp.tsr
  *     • Solo disponible cuando status === "signed"; devuelve binario .tsr (RFC3161)
  *
- * JWT: OTP free plan (sin exp); se regenera vía POST /api/cincel/refresh-jwt.
+ * JWT: si CINCEL_PAT está configurado, el JWT se refresca automáticamente vía PAT
+ *      (Business Pro/Enterprise). Fallback: OTP manual vía POST /api/cincel/refresh-jwt.
  */
 import PDFDocument from 'pdfkit';
 
@@ -16,6 +17,7 @@ const BASE_URL = process.env.CINCEL_BASE_URL || 'https://api.cincel.digital/v3';
 const TEAM_UUID = process.env.CINCEL_TEAM_UUID || '';
 const FOLDER_UUID = process.env.CINCEL_FOLDER_UUID || '';
 export const CINCEL_EMAIL = process.env.CINCEL_EMAIL || '';
+const CINCEL_PAT = process.env.CINCEL_PAT || '';
 
 // ── JWT store ──────────────────────────────────────────────────────
 let _jwt = process.env.CINCEL_JWT || '';
@@ -24,6 +26,24 @@ let _jwtExpired = false;
 export function getCincelJwt() { return _jwt; }
 export function setCincelJwt(jwt) { _jwt = jwt; _jwtExpired = false; }
 export function isCincelJwtExpired() { return _jwtExpired; }
+
+/** Refresca el JWT usando el PAT (Business Pro). Retorna el nuevo JWT. */
+export async function refreshJwtFromPat() {
+  if (!CINCEL_PAT) throw new CincelError(503, 'CINCEL_PAT no configurado en .env');
+  const b64 = Buffer.from(`${CINCEL_PAT}:`).toString('base64');
+  const res = await fetch(`${BASE_URL}/tokens/jwt`, {
+    headers: { Authorization: `Basic ${b64}` },
+    signal: AbortSignal.timeout(10_000),
+  });
+  if (!res.ok) {
+    const txt = await res.text().catch(() => '');
+    throw new CincelError(res.status, `PAT refresh error: ${txt.slice(0, 200)}`);
+  }
+  const jwt = (await res.text()).trim().replace(/^"|"$/g, '');
+  setCincelJwt(jwt);
+  console.log('[Cincel] JWT refrescado automáticamente via PAT');
+  return jwt;
+}
 
 // ── Errors ─────────────────────────────────────────────────────────
 export class CincelError extends Error {
@@ -60,6 +80,13 @@ async function cincelFetch(path, { method = 'GET', headers = {}, body, rawRespon
   }
 
   if (res.status === 401 || res.status === 403) {
+    // Si hay PAT configurado, intentar refresh automático (una sola vez)
+    if (CINCEL_PAT && !headers['__pat_retry']) {
+      try {
+        await refreshJwtFromPat();
+        return cincelFetch(path, { method, headers: { ...headers, __pat_retry: '1' }, body, rawResponse });
+      } catch { /* si falla el refresh, lanzar el error original */ }
+    }
     _jwtExpired = true;
     throw new CincelAuthError();
   }
@@ -302,7 +329,7 @@ export function getCincelInfo() {
         const iat = payload.iat ? new Date(payload.iat * 1000).toISOString().slice(0, 19) : '?';
         const exp = payload.exp
           ? `exp: ${new Date(payload.exp * 1000).toISOString().slice(0, 10)} ${Date.now() > payload.exp * 1000 ? '(VENCIDO)' : '(vigente)'}`
-          : 'sin exp (OTP free plan)';
+          : CINCEL_PAT ? 'sin exp (se refresca via PAT)' : 'sin exp (OTP free plan)';
         jwtInfo = `iat: ${iat} - ${exp}`;
       }
     } catch { jwtInfo = 'malformado'; }
@@ -312,6 +339,7 @@ export function getCincelInfo() {
     teamUuid: TEAM_UUID,
     folderUuid: FOLDER_UUID,
     email: CINCEL_EMAIL,
+    patConfigured: CINCEL_PAT.length > 0,
     jwtConfigured: _jwt.length > 0,
     jwtExpired: _jwtExpired,
     jwtInfo,
