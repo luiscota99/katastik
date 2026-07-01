@@ -192,14 +192,15 @@ export interface CincelInfo {
 
 export async function sendToCincel(
   documentId: string,
-  etapa: 'envio' | 'firma' | 'sellado' | 'archivado' | 'auto' = 'auto'
+  etapa: 'envio' | 'firma' | 'sellado' | 'archivado' | 'auto' = 'auto',
+  extra?: { signerEmail?: string; signerName?: string }
 ): Promise<CincelStepResult> {
   if (MODE === 'mock') {
     throw new Error('sendToCincel requiere modo api.');
   }
   return apiFetch<CincelStepResult>(
     `/documents/${documentId}/cincel`,
-    { method: 'POST', body: JSON.stringify({ etapa }) }
+    { method: 'POST', body: JSON.stringify({ etapa, ...extra }) }
   );
 }
 

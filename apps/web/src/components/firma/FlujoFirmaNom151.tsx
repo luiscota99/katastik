@@ -75,7 +75,7 @@ interface CincelData {
   timestamp?: string;
 }
 
-type DocExt = Documento & { _etapaCincel?: string; _cincelDocUuid?: string; nombreLegible?: string };
+type DocExt = Documento & { _etapaCincel?: string; _cincelDocUuid?: string; nombreLegible?: string; _signerEmail?: string };
 
 export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
   const getEtapaInicial = (): number => {
@@ -91,33 +91,21 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [cincelJwtExpired, setCincelJwtExpired] = useState(false);
   const [currentDoc, setCurrentDoc] = useState<DocExt>(doc as DocExt);
-  // State specific to the firma step (waiting for user to sign in portal)
   const [waitingForSignature, setWaitingForSignature] = useState(false);
   const [pollCount, setPollCount] = useState(0);
-  const [iframeBlocked, setIframeBlocked] = useState(false);
+  // Email del firmante — se pide antes de subir a Cincel
+  const [signerEmail, setSignerEmail] = useState('');
+  const [signerEmailInput, setSignerEmailInput] = useState('');
+  const [showEmailPrompt, setShowEmailPrompt] = useState(false);
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const iframeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const allDone = completedSteps >= ETAPAS.length;
   const nextStep = completedSteps < ETAPAS.length ? completedSteps : null;
-  const signingUrl = cincelData.signingUrl ?? null;
-  const showIframe = waitingForSignature && !!signingUrl && !iframeBlocked;
 
   const stopPolling = () => {
     if (pollRef.current) { clearInterval(pollRef.current); pollRef.current = null; }
   };
-  useEffect(() => () => {
-    stopPolling();
-    if (iframeTimeoutRef.current) clearTimeout(iframeTimeoutRef.current);
-  }, []);
-
-  // Detectar si el iframe de Cincel se bloqueó (timeout 6s sin onLoad)
-  useEffect(() => {
-    if (!waitingForSignature || !signingUrl || iframeBlocked) return;
-    if (iframeTimeoutRef.current) clearTimeout(iframeTimeoutRef.current);
-    iframeTimeoutRef.current = setTimeout(() => setIframeBlocked(true), 6000);
-    return () => { if (iframeTimeoutRef.current) clearTimeout(iframeTimeoutRef.current); };
-  }, [waitingForSignature, signingUrl, iframeBlocked]);
+  useEffect(() => () => stopPolling(), []);
 
   const getStepState = (idx: number): EtapaState => {
     if (idx < completedSteps) return 'done';
@@ -145,7 +133,7 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
     return () => stopPolling();
   }, [waitingForSignature, currentDoc.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const runStep = async (stepIdx: number, skipDelay = false) => {
+  const runStep = async (stepIdx: number, skipDelay = false, overrideSignerEmail?: string) => {
     const etapa = ETAPAS[stepIdx];
     setActiveStep(stepIdx);
     setError(null);
@@ -156,13 +144,21 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
     }
 
     try {
-      const result = await sendToCincel(currentDoc.id, etapa.id);
+      const extra = etapa.id === 'envio' && (overrideSignerEmail || signerEmail)
+        ? { signerEmail: overrideSignerEmail || signerEmail }
+        : undefined;
+      const result = await sendToCincel(currentDoc.id, etapa.id, extra);
 
-      // Firma step: document not yet signed — show signing portal
+      // Envio step: save signer email from response if backend confirms it
+      if (etapa.id === 'envio') {
+        const confirmedEmail = result.signerEmail || (result.document as DocExt)?._signerEmail;
+        if (confirmedEmail) setSignerEmail(confirmedEmail);
+      }
+
+      // Firma step: document not yet signed — wait for signer to check email
       if (etapa.id === 'firma' && result.signed === false) {
         setActiveStep(null);
         setWaitingForSignature(true);
-        setCincelData(prev => ({ ...prev, signingUrl: result.signingUrl || cincelData.signingUrl }));
         return;
       }
 
@@ -194,7 +190,7 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-      <div className={`bg-white rounded-2xl shadow-2xl w-full overflow-hidden transition-all duration-300 ${showIframe ? 'max-w-4xl' : 'max-w-lg'}`}>
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
 
         {/* Header */}
         <div className="bg-[#1B3A5C] text-white px-6 py-4 flex items-center justify-between">
@@ -306,48 +302,22 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
                   </div>
                 )}
 
-                {/* Firma waiting: iframe o link/fallback */}
-                {isFiremaWaiting && signingUrl && (
+                {/* Firma waiting: instrucción de revisar correo */}
+                {isFiremaWaiting && (
                   <div className="mt-3 ml-11 space-y-2">
-                    {showIframe ? (
-                      <div className="rounded-lg overflow-hidden border border-amber-200">
-                        <iframe
-                          src={signingUrl}
-                          className="w-full border-0"
-                          style={{ height: '480px' }}
-                          title="Portal de firma Cincel"
-                          onLoad={() => {
-                            if (iframeTimeoutRef.current) clearTimeout(iframeTimeoutRef.current);
-                          }}
-                          onError={() => setIframeBlocked(true)}
-                        />
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 text-xs text-amber-800 space-y-1">
+                      <div className="font-semibold flex items-center gap-1">
+                        <ExternalLink className="w-3 h-3" /> Revisa tu correo electrónico
                       </div>
-                    ) : (
-                      <div className="flex flex-wrap gap-2">
-                        {iframeBlocked && (
-                          <p className="w-full text-[11px] text-amber-700">
-                            El portal no pudo cargarse aquí. Ábrelo en una nueva pestaña:
-                          </p>
-                        )}
-                        <a href={signingUrl} target="_blank" rel="noreferrer">
-                          <Button size="sm" className="gap-1.5 bg-amber-600 hover:bg-amber-700 h-7 text-xs">
-                            <ExternalLink className="w-3 h-3" /> Abrir portal Cincel
-                          </Button>
-                        </a>
-                      </div>
-                    )}
-                    <div className="flex gap-2">
-                      {showIframe && (
-                        <Button size="sm" variant="outline" className="gap-1.5 h-7 text-xs"
-                          onClick={() => setIframeBlocked(true)}>
-                          <ExternalLink className="w-3 h-3" /> Abrir en pestaña
-                        </Button>
+                      {signerEmail && (
+                        <div>Cincel envió un enlace de firma a <span className="font-mono font-semibold">{signerEmail}</span></div>
                       )}
-                      <Button size="sm" variant="outline" className="gap-1.5 h-7 text-xs"
-                        onClick={handleVerifySignature}>
-                        <RefreshCw className="w-3 h-3" /> Verificar firma
-                      </Button>
+                      <div className="text-amber-700">Haz clic en el enlace del correo para firmar — no se requiere cuenta en Cincel.</div>
                     </div>
+                    <Button size="sm" variant="outline" className="gap-1.5 h-7 text-xs"
+                      onClick={handleVerifySignature}>
+                      <RefreshCw className="w-3 h-3" /> Ya firmé, verificar ahora
+                    </Button>
                   </div>
                 )}
               </div>
@@ -375,7 +345,43 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
           ) : waitingForSignature ? (
             <div className="flex items-center gap-2 text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 flex-1">
               <Loader2 className="w-3.5 h-3.5 animate-spin flex-shrink-0" />
-              Esperando que el firmante complete la firma en el portal de Cincel…
+              Verificando firma automáticamente… (intento {pollCount})
+            </div>
+          ) : showEmailPrompt ? (
+            <div className="flex-1 space-y-2">
+              <p className="text-xs text-gray-600 font-medium">¿A qué correo enviamos el enlace de firma?</p>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  value={signerEmailInput}
+                  onChange={e => setSignerEmailInput(e.target.value)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' && signerEmailInput) {
+                      setSignerEmail(signerEmailInput);
+                      setShowEmailPrompt(false);
+                      runStep(0, false, signerEmailInput);
+                    }
+                  }}
+                  placeholder="correo@ejemplo.com"
+                  className="flex-1 text-xs border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  autoFocus
+                />
+                <Button
+                  size="sm"
+                  disabled={!signerEmailInput}
+                  onClick={() => {
+                    setSignerEmail(signerEmailInput);
+                    setShowEmailPrompt(false);
+                    runStep(0, false, signerEmailInput);
+                  }}
+                  className="bg-[#1B3A5C] hover:bg-[#142d47] gap-1.5 shrink-0"
+                >
+                  <Send className="w-3.5 h-3.5" /> Enviar
+                </Button>
+                <Button size="sm" variant="outline" onClick={() => setShowEmailPrompt(false)}>
+                  Cancelar
+                </Button>
+              </div>
             </div>
           ) : (
             <>
@@ -385,7 +391,10 @@ export function FlujoFirmaNom151({ doc, onClose, onComplete }: Props) {
               <Button
                 size="sm"
                 disabled={activeStep !== null || nextStep === null}
-                onClick={() => nextStep !== null && runStep(nextStep)}
+                onClick={() => {
+                  if (nextStep === 0) { setShowEmailPrompt(true); return; }
+                  nextStep !== null && runStep(nextStep);
+                }}
                 className="bg-[#1B3A5C] hover:bg-[#142d47] gap-1.5"
               >
                 {activeStep !== null ? (

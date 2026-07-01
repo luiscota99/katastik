@@ -958,17 +958,17 @@ app.post('/api/documents/:id/cincel', async (req, res) => {
       );
 
       const docName = doc.nombreLegible || doc.nombre || `Expediente-${doc.predioId}`;
-      // Firmante: el operador del municipio (o propietario según flujo)
-      const signers = [{
-        name: predio?.propietario || 'Operador Catastro 078',
-        email: 'tech@humansoftware.mx',
-      }];
+      // Firmante: usar el email/nombre del body si se provee, si no el del propietario/operador
+      const signerEmail = req.body?.signerEmail || 'tech@humansoftware.mx';
+      const signerName = req.body?.signerName || predio?.propietario || 'Operador Catastro 078';
+      const signers = [{ name: signerName, email: signerEmail }];
 
       const { cincelDocUuid, signingUrl } = await uploadDocument(pdfBuffer, docName, signers);
 
       doc._etapaCincel = 'envio';
       doc._cincelDocUuid = cincelDocUuid;
       doc._signingUrl = signingUrl;
+      doc._signerEmail = signerEmail;
       doc.estado = 'pendiente_firma';
       cincelStatus = 'enviado';
       accion = `Documento subido a Cincel — pendiente de firma electrónica`;
@@ -981,7 +981,7 @@ app.post('/api/documents/:id/cincel', async (req, res) => {
       addBitacoraEvent(doc.predioId, accion, 'operador-catastro',
         `Doc: ${docName} | UUID Cincel: ${cincelDocUuid} | Signing URL generada`);
 
-      return res.json({ document: doc, cincelEvent, etapa: resolvedEtapa, signingUrl, dashboard: calcDashboard() });
+      return res.json({ document: doc, cincelEvent, etapa: resolvedEtapa, signingUrl, signerEmail, dashboard: calcDashboard() });
     }
 
     // ── Etapa 2: Verificar firma ─────────────────────────────
