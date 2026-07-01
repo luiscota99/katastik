@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
-import { MapContainer, TileLayer, GeoJSON, Marker, Polyline, Polygon as LeafletPolygon, CircleMarker, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, Marker, Polyline, Polygon as LeafletPolygon, CircleMarker, useMap, useMapEvents, ZoomControl } from 'react-leaflet';
 import L from 'leaflet';
 import type { Layer, PathOptions, StyleFunction } from 'leaflet';
 import type { Feature, Polygon, MultiPolygon, Geometry, FeatureCollection, GeoJsonObject } from 'geojson';
@@ -170,7 +170,7 @@ function MapSearchControl({
 
   const flyToPredioid = (id: string) => {
     if (!geojson) return;
-    const feature = geojson.features.find(f => f.properties.id === id);
+    const feature = geojson.features.find(f => f.properties?.id === id);
     if (!feature) return;
     try {
       const layer = L.geoJSON(feature);
@@ -184,10 +184,10 @@ function MapSearchControl({
     const lq = query.toLowerCase();
     return geojson.features
       .filter(f =>
-        f.properties.id?.toLowerCase().includes(lq) ||
-        f.properties.claveCatastral?.toLowerCase().includes(lq) ||
-        f.properties.colonia?.toLowerCase().includes(lq) ||
-        f.properties.usoSuelo?.toLowerCase().includes(lq)
+        f.properties?.id?.toLowerCase().includes(lq) ||
+        f.properties?.claveCatastral?.toLowerCase().includes(lq) ||
+        f.properties?.colonia?.toLowerCase().includes(lq) ||
+        f.properties?.usoSuelo?.toLowerCase().includes(lq)
       )
       .slice(0, 5);
   }, [query, geojson]);
@@ -205,21 +205,25 @@ function MapSearchControl({
       </div>
       {results.length > 0 && (
         <div className="mt-1 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-          {results.map(f => (
-            <button
-              key={f.properties.id}
-              className="w-full text-left px-3 py-2 hover:bg-gray-50 text-sm border-b border-gray-100 last:border-0"
-              onClick={() => {
-                setQuery('');
-                flyToPredioid(f.properties.id);
-              }}
-            >
-              <div className="font-medium text-gray-800">{f.properties.id}</div>
-              <div className="text-xs text-gray-500">
-                {[f.properties.colonia ?? f.properties.domicilio, f.properties.usoSuelo].filter(Boolean).join(' · ') || f.properties.propietario || ''}
-              </div>
-            </button>
-          ))}
+          {results.map(f => {
+            const p = f.properties;
+            if (!p) return null;
+            return (
+              <button
+                key={p.id}
+                className="w-full text-left px-3 py-2 hover:bg-gray-50 text-sm border-b border-gray-100 last:border-0"
+                onClick={() => {
+                  setQuery('');
+                  flyToPredioid(p.id);
+                }}
+              >
+                <div className="font-medium text-gray-800">{p.id}</div>
+                <div className="text-xs text-gray-500">
+                  {[p.colonia ?? p.domicilio, p.usoSuelo].filter(Boolean).join(' · ') || p.propietario || ''}
+                </div>
+              </button>
+            );
+          })}
         </div>
       )}
     </div>
@@ -376,7 +380,7 @@ export function MapaCatastral({
     if (!feature) return {};
     const props = feature.properties as PredioProperties;
     const isSelected = props.id === selectedId;
-    const color = getFeatureColor(props.usoSuelo);
+    const color = getFeatureColor(props.usoSuelo ?? '');
     return {
       color: isSelected ? '#E8913A' : '#fff',
       weight: isSelected ? 3 : 1.5,
@@ -598,8 +602,10 @@ export function MapaCatastral({
           center={mapCenter}
           zoom={DEFAULT_ZOOM}
           scrollWheelZoom
+          zoomControl={false}
           style={{ height: '100%', width: '100%' }}
         >
+          <ZoomControl position="bottomleft" />
           {satellite ? (
             <TileLayer
               attribution='Imagery &copy; <a href="https://www.esri.com">Esri</a>'

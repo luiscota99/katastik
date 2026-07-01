@@ -19,3 +19,8 @@ Thumbs.db
 
 # Docker
 docker-compose.override.yml
+
+# Scraping y documentación generada
+catastroApiScrap/
+data/
+docs/

@@ -23,11 +23,19 @@ export interface Predio {
 
 export interface PredioProperties {
   id: string;
-  claveCatastral: string;
-  colonia: string;
-  usoSuelo: string;
-  zonaValor: string;
+  cco?: string;
+  claveCatastral?: string;
+  colonia?: string;
+  domicilio?: string;
+  propietario?: string;
+  usoSuelo?: string;
+  zonaValor?: string;
+  estadoPredio?: string;
   estadoPago?: string;
+  adeudoMXN?: number;
+  valorCatastralMXN?: number;
+  precioPorM2?: number;
+  superficieM2?: number;
   source?: string;
   disclaimer?: string;
 }
